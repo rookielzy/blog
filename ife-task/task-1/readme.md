@@ -32,4 +32,18 @@
 `RFC1766` 定义和解释了HTML文档中必须使用语言代码。
 简而言之，语言代码必须要有主代码，也可伴随一些子代码。
 
+------
 
+## 表格单元横跨
+
+![table-cross](https://github.com/rookielzy/blog/blob/gh-pages/ife-task/task-1/img/table-cross.PNG)
+
+一开始`1000`这个单元格没有横跨，造成`操作`单元格下方有多余空间。
+在查阅了W3C后才知道自己遗漏了关于 `colspan' 和 'rowspan' 的学习。
+
+[W3C td 属性详解]（http://www.w3school.com.cn/tags/tag_td.asp）
+
+------
+
+作者：罗志尧 [@rookielzy](https://github.com/rookielzy)
+2016.03.15
