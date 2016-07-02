@@ -1,0 +1,57 @@
+.container { margin: 0px 20px 0px 20px;}
+.guide {
+    background-color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+    padding: 20px;
+}
+
+a:link { color: white; text-decoration: none;}
+a:visited { color: gray; text-decoration: none;}
+a:hover { color: white; text-decoration: none;}
+a:active { color: white; text-decoration: none;}
+
+#github {
+    position: relative;
+    left: 100px;
+    top: 1px;
+}
+
+#tag {
+    position: absolute;
+    right: 100px;
+    top: 25px;
+}
+
+.par {
+    border: 1px solid black;
+    margin: 20px 0px 0px 20px;
+}
+
+table { 
+    border-collapse: collapse;
+    width:80%;
+    margin-bottom: 10px;
+    margin-left:10%;    
+}
+
+table, th, td { border: 1px solid gray; }
+
+thead {
+    color: white;
+    background-color: black;
+}
+
+th, td { width: 33%;}
+
+#sum { background-color: gray; }
+
+#get {
+    margin-left: 25%;
+}
