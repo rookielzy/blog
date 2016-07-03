@@ -11,10 +11,10 @@
 			<div id="guide">
 				<img src="../images/github-button.png" alt="github"/>
 				<ul id="nav">
-					<li>Link 1</li>
-					<li>Link 2</li>
-					<li>Link 3</li>
-					<li>Link 4</li>
+					<li><a>Link 1</a></li>
+					<li><a>Link 2</a></li>
+					<li><a>Link 3</a></li>
+					<li><a>Link 4</a></li>
 				</ul>
 			</div>
 		</header>
@@ -92,24 +92,24 @@
 			<form action="">
 				<blockquote>Side Line</blockquote>
 				<label class="info">Please enter Email: </label>
-				<input type="text" placeholder="enter your email"/>
+				<input type="text" placeholder="enter your email" required/>
 
 				<br /> 
 				<label class="info">Please enter your Password: </label>
-				<input type="password" placeholder="enter your password"/>
+				<input type="password" placeholder="enter your password" required/>
 
 				<br />
 				<label class="info">Enter password again: </label>
-				<input type="password" placeholder="enter your passwords again"/>
+				<input type="password" placeholder="enter your passwords again" required/>
 
 				<br />
 				<label class="info">Sex: </label>
-				<input type="radio" name="sex" value="man"/><span>Man</span>
+				<input type="radio" name="sex" value="man" checked="checked"/><span>Man</span>
 				<input type="radio" name="sex", value="woman"/><span>Woman</span>
 
 				<br />
 				<label class="info">City: </label>
-				<select name="city">
+				<select name="city" required>
 					<option value="gz">GuangZhou</option>
 					<option value="bj">BeiJing</option>
 					<option value="sh">ShangHai</option>
@@ -121,7 +121,7 @@
 				<input type="checkbox"><label>Art</label>
 				<input type="checkbox"><label>Science</label>
 				<label class="info">Peosonal Description: </label>
-				<textarea name="peosonal" cols="50" rows="4" placeholder="Introduce yourself"></textarea>
+				<textarea name="peosonal" cols="50" rows="4" placeholder="Introduce yourself" required></textarea>
 				<br />
 				<button type="submit">Submit</button>
 			</form>
