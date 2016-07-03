@@ -1,0 +1,86 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(222,222,222);
+}
+
+header {
+    background-color: rgb(51, 51, 51);
+    height: 100%;
+    min-width: 1000px;
+}
+
+#guide {
+    width: 100%;
+    height: 100px;
+}
+
+#guide a {
+    text-decoration: none;
+    color: white;
+}
+
+#guide a:link { color:white; text-decoration: none;}
+#guide a:visited { color: white; text-decoration: none;}
+#guide a:hover { color: white; text-decoration: none;}
+
+#nav {
+    margin: 0 100px 0 0;
+    padding: 0;
+    float: right;
+    height: 100px;
+    line-height: 100px;
+}
+#nav li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+article {
+    width: 85%;
+    border: thin solid rgb(203, 203, 203);
+    padding: 30px;
+    margin: 30px auto;
+    background-color: white;
+    line-height: 30px;
+    word-break: normal;
+    border-right-style: ridge;
+    border-bottom-style: ridge;
+}
+article p {
+    text-indent: 2em;
+}
+
+table { 
+    border-collapse: collapse;
+    width:80%;
+    margin-bottom: 10px;
+    margin-left:10%;    
+}
+
+table, th, td { border: 1px solid gray; }
+
+thead {
+    color: white;
+    background-color: black;
+}
+
+th, td { width: 33%;}
+
+#sum { background-color: gray; }
+
+.info {
+    text-align: right;
+    display: inline-block;
+    width: 50%;
+}
+
+button {
+    color: white;
+    border-radius: 5%;
+    background-color: Blue;
+    width: 80%;
+    height: 50px;
+    margin-left: 10%;
+}

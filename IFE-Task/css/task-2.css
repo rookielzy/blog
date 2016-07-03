@@ -1,6 +1,14 @@
-.container { margin: 0px 20px 0px 20px;}
+/*fixed*/
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
 .guide {
     background-color: black;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
 }
 
 ul {
@@ -32,6 +40,7 @@ a:active { color: white; text-decoration: none;}
 .par {
     border: 1px solid black;
     margin: 20px 0px 0px 20px;
+    padding: 30px;
 }
 
 table { 
