@@ -1,0 +1,61 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    background-color: #eee;
+    margin: 20px;
+    border: 1px solid #999;
+    display: inline-block;
+}
+
+#info {
+    line-height: 15px;
+    word-wrap: normal;
+    margin-left: 240px;
+    margin-right: 160px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+#logo {
+    width: 200px;
+    height: 120px;
+    float: left;
+    margin: 20px;
+}
+
+#logo img {
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#logo p {
+    float: right;
+    margin-right: 20px;
+}
+
+#member {
+    width: 120px;
+    height: 100%;
+    float: right;
+    margin: 20px;
+}
+
+#member img {
+    width: 80px;
+    height: 80px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.side {
+    background-color: white;
+    border: 1px solid #999;
+}
