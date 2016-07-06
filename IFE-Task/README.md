@@ -36,3 +36,15 @@
 
         -->
 ```
+
+## Task 4
+
+> 清除浮动： overflow 的使用
+
+> 清除浮动溢出： overflow: hidden 的使用
+
+> position 的使用，使用场景
+
+> 伪元素 的使用 ::before ::after
+
+> 在元素需要适配浏览器大小时， 元素的定位可考虑 margin: auto
