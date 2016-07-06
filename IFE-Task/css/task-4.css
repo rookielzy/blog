@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+.box {
+    
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #fc0;
+    position: absolute;
+
+}
+
+#square {
+    width: 400px;
+    height: 200px;
+    background-color: #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+#circle1 {
+    left: -50px;
+    top: -50px;
+}
+
+#circle2 {
+    bottom: -50px;
+    right: -50px;
+}
