@@ -119,3 +119,53 @@ body {
     bottom: -25px;
     left: 0;
 }
+
+.article1 {
+    width: 651px;
+}
+
+.article1 div {
+    float: left;
+    padding-right: 20px;
+    font-size: 12px;
+    color: #231815;
+    opacity: 0.7;
+    font-family: "微软雅黑";
+    line-height: 16px;
+}
+
+.article1 h4 {
+    font-size: 16px;
+    text-decoration: underline;
+    color: #418c59;
+}
+
+#what {
+    width: 36%;
+
+}
+
+#when, #how {
+    width: 27%;
+}
+
+#when h4 {
+    color: #d2994f;
+}
+
+#how h4{
+    color: #cc7680
+}
+
+#how p:nth-child(n+1) {
+    margin-bottom: -15px;
+}
+
+#how P:nth-child(2) {
+    margin-bottom: 55px;
+}
+
+#how p:nth-child(n+1) span{
+    color: #cd4a48;
+    font-style: italic;
+}
