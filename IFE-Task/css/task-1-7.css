@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 1280px;
+}
+
+header {
+    width: 100%;
+}
+
+#logo{
+    margin-left: 100px;
+    display: inline-block;
+}
+#logo::after {
+    content: "新世界";
+    position: relative;
+    top: -18px;  
+}
+
+nav {
+    float: right;
+    margin-right: 150px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    color: #e7504d;
+    padding-bottom: 25px;
+    border-bottom: 3px #e7504d solid;
+}
+
+.body-wrapper {
+    background-image: url("../../images/bg.gif");
+    height: 690px;
+    /*i don't know why two part can not get close*/
+    position: relative;
+    top: -31px;
+}
+
+.content {
+    position: relative;
+    top: 25%;
+    left: 10%;
+    color: white;
+    font-family: Arial;
+}
+
+.content h1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: -5px;
+}
+
+.content p {
+   font-size: 14px;
+   margin-bottom: 50px;
+}
+
+.content button {
+    width: 210px;
+    height: 40px;
+    border-style: none;
+    background: #e7504d;
+    color: white;
+    font-size: 16px;
+}
