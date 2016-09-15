@@ -20,12 +20,20 @@
   在事件处理函数中
   获取aqi-input输入的值，并显示在aqi-display中
   */
-  var button = document.getElementById("button");
-  var input = document.getElementById("aqi-input");
-  var display = document.getElementById("aqi-display");
+  var button = document.getElementById("button"),
+      display = document.getElementById("aqi-display");
+
+  var handler = function() {
+    var input = parseInt(document.getElementById("aqi-input").value);
+    if (!isNaN(input) && input > 0 && input < 100){
+      display.innerHTML = input;
+    }    
+    else{
+      alert(input + " is not an legal value or it was less than 0 or bigger than 100");
+    }
+  }
   button.onclick = function() {
-    var data = input.value;
-    display.innerHTML = data;
+    handler();
   }
 })();
 
