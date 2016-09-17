@@ -34,8 +34,18 @@
  * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
  * 返回一个数组，格式见函数中示例
  */
-
-  //  console.log(data);  
+  var source = document.getElementById("source"); 
+  var re = "空气质量："; 
+  var input = source.querySelectorAll("li");
+  var data = [];
+  var j = new Array();
+  for (var i = 0; i < input.length; i++){
+    j.push(input[i].innerText.split(re));
+    var strCity = j[i][0];
+    var num = j[i][1];
+    data.push([strCity, num]);
+  }
+   console.log(data);  
 
 function getData() {
   /*
@@ -49,7 +59,7 @@ function getData() {
   for (var i = 0; i < input.length; i++){
     j.push(input[i].innerText.split(re));
     var strCity = j[i][0];
-    var num = Number(j[i][1].slice(1));
+    var num = j[i][1];
     data.push([strCity, num]);
   }
   /*
@@ -82,7 +92,13 @@ function sortAqiData(data) {
  * 格式见ul中的注释的部分
  */
 function render(data) {
-
+  var resort = document.getElementById("resort");
+  var num = ["一","二","三","四","五","六","七","八","九"];
+  var content = "";
+  data.forEach(function(element, index){
+    content += ("<li>第" + num[index] + "名:" + element[0] + ":<b>" + element[1] + "</b></li>");
+  });
+  resort.innerHTML = content;
 }
 
 function btnHandle() {
@@ -95,7 +111,8 @@ function btnHandle() {
 function init() {
 
   // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
-
+  var sortbtn = document.getElementById("sort-btn");
+  sortbtn.onclick = btnHandle;
 }
 init();
 
