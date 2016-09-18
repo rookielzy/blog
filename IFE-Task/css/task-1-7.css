@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     width: 1280px;
 }
@@ -77,4 +77,21 @@ nav ul li:hover {
     background: #e7504d;
     color: white;
     font-size: 16px;
+}
+
+.content-side {
+    float: left;
+    text-align: center;
+    width: 320px;
+    height: 234px;
+}
+.content-side p {
+    max-width: 155px;
+    height: 50px;
+    font-size: 14px;
+    padding-left: 80px;
+}
+.content-side::after {
+    border-right: 1px #999999 solid;
+    content: "";
 }
