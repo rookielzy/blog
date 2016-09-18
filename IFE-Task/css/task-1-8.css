@@ -22,19 +22,19 @@ body {
         max-width: 1278px;
     }
     .col-md-1 {
-        width: 5.33%;
+        width: calc(8.33% - 50px);
     }
     .col-md-2 {
-        width: 13.67%;
+        width: calc(16.67% - 50px);
     }
     .col-md-3 {
-        width: 23%;
+        width: calc(25% - 50px);
     }
     .col-md-4 {
-        width: 29%;
+        width: calc(33.33% - 50px);
     }
     .col-md-6 {
-        width: 42%;
+        width: calc(50% - 50px);
     }
 }
 
@@ -46,21 +46,21 @@ body {
         max-width: 768px;
     }
     .col-xs-2 {
-        width: 13.67%;
+        width: calc(16.67% - 50px);
     }
     .col-xs-3 {
-        width: 23%;
+        width: calc(25% - 50px);
     }
     .col-xs-4 {
-        width: 29%;
+        width: calc(33.33% - 50px);
     }
     .col-xs-6 {
-        width: 42%;
+        width: calc(50% - 50px);;
     }
     .col-xs-8 {
-        width: 48%;
+        width: calc(66.67% - 50px);
     }
     .col-xs-12 {
-        width: 91%;
+        width: calc(100% - 50px);
     }
 }
