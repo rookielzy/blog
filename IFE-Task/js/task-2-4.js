@@ -68,7 +68,7 @@ function addBtnHandle() {
  */
 function delBtnHandle() {
   // do sth.
-
+  
   renderAqiList();
 }
 

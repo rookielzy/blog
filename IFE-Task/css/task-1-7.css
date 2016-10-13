@@ -95,3 +95,52 @@ nav ul li:hover {
     border-right: 1px #999999 solid;
     content: "";
 }
+
+#content-side {
+    height:320px;
+}
+
+#about {
+    background: #ededed;
+    height: 350px;
+}
+
+#about1 {
+    width: 650px;
+    margin: 0 auto;
+    font-size: 28px;
+    position: relative;
+    top: 50px;
+}
+
+#about img{
+    position: relative;
+    left: 35%;
+}
+
+#activity {
+    background-image: url("../../images/bg04.gif");
+    height: 341px;
+}
+
+#activity div {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#activity div p {
+    font-size: 16px;
+}
+
+.select-group {
+    width: 20%;
+    height: 40px;
+}
+
+.select-group option:hover {
+    background: #e7504d;
+}
