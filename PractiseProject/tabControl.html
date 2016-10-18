@@ -3,8 +3,102 @@
     <head>
         <meta charset="UTF-8">
         <title>简易选项卡</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            nav {
+                background-color: black;
+                color: white;
+                width: 400px;
+                margin: 0 auto;
+                margin-top: 20px;
+                border: 1px solid black;
+            }
+            nav li {
+                list-style: none;
+                display: inline-block;
+                widht: 50px;
+                height: 30px;
+                line-height: 30px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            nav li:hover {
+                background-color: #ccc;
+                color: black;
+            }
+            .divTab {
+                width: 400px;
+                border: 1px solid black;
+                position: absolute;
+                margin: 3px 0 0 -201px;
+                top: 49px;
+                left: 50%;
+                display: none;
+            }
+            .divTab li {
+                padding: 10px;
+                line-height: 16px;
+                margin-left: 30px;
+            }
+        </style>
     </head>
     <body>
-        
+        <nav>
+            <ul>
+                <li>第一课</li><li>第二课</li><li>第三课</li>
+            </ul>
+        </nav>
+        <div id="class1" class="divTab">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+        </div>
+        <div id="class2" class="divTab">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+            </ul>
+        </div>
+        <div id="class3" class="divTab">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+        <script>
+            var lesson = document.getElementsByTagName("nav")[0].getElementsByTagName("li");
+            var class1 = document.getElementById("class1");
+            var class2 = document.getElementById("class2");
+            var class3 = document.getElementById("class3");
+            for (var i = 0; i < lesson.length; i++){
+                lesson[i].onmouseover = function() {
+                    tmp[i].style.display = "block";
+                    for (var j = 0; j < tmp.length; j++){
+                        if (j !== i){
+                            tmp[j].style.display = "none";
+                        }
+                    }
+                };
+            };
+        </script>
     </body>
 </html>
