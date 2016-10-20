@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>网页计算器</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            #main {
+                background: black;
+                width: 264px;
+                margin: 20px auto 0 auto;
+            }
+            .btn {
+                width: 50px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 20px;
+                border-radius: 5px;
+                margin: 10px 5px 10px 5px;
+                display: inline-block;
+                background-color: white;
+                text-align: center;
+            }
+            #func::nth-child(n+1) {
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="display"></div>
+            <div id="func">
+                <div class="btn"><strong>c</strong></div>
+                <div class="btn"><strong>%</strong></div>
+                <div class="btn"><strong>/</strong></div>
+                <div class="btn"><strong>x</strong></div>
+                <div class="btn"><strong>7</strong></div>
+                <div class="btn"><strong>8</strong></div>
+                <div class="btn"><strong>9</strong></div>
+                <div class="btn"><strong>-</strong></div>
+                <div class="btn"><strong>4</strong></div>
+                <div class="btn"><strong>5</strong></div>
+                <div class="btn"><strong>6</strong></div>
+                <div class="btn"><strong>+</strong></div>
+                <div class="btn"><strong>1</strong></div>
+                <div class="btn"><strong>2</strong></div>
+                <div class="btn"><strong>3</strong></div>
+                <div class="btn"><strong>=</strong></div>
+                <div class="btn"><strong>0</strong></div>
+                <div class="btn"><strong>.</strong></div>
+            </div>
+        </div>
+    </body>
+</html>
