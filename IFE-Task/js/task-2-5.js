@@ -54,10 +54,11 @@ var pageState = {
 /**
  * 渲染图表
  */
+var aqiChartWrap = document.getElementsByClassName("aqi-chart-wrap")[0],
+    city = document.getElementById("city-select"),
+    time = document.getElementsByName("gra-time");
 function renderChart() {
-  var aqiChartWrap = document.getElementsByClassName("aqi-chart-wrap")[0],
-      city = document.getElementById("city-select"),
-      time = document.getElementsByName("gra-time").value;
+  
   
   
 
