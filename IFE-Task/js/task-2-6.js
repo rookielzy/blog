@@ -1,42 +1,41 @@
 var queue = document.getElementById("queue");
 var num = document.getElementById("num");
 var btn = document.getElementsByTagName("input");
-
-function add(which) {
+var l = 0;
+btn[1].onclick = function() {
     var newList = document.createElement("li");
-    if (which === 5){
-        var theFirstChild = queue.firstChild;
-        queue.insertBefore(newList, theFirstChild);
-    }
-    else {
-        queue.appendChild(newList);
-    }
     newList.innerText = num.value;
-    console.log(btn[which]);
+    var theFirstChild = queue.firstChild;
+    queue.insertBefore(newList, theFirstChild);
+    l++;
 }
 
-function del(which) {
-    if (which === 5){
-        var theFirstChild = queue.firstChild;
-        queue.removeChild(theFirstChild);
-    }
-    else {
-        var theLastChild = queue.lastChild;
-        queue.removeChild(theLastChild);
-    }
+btn[2].onclick = function() {
+    var newList = document.createElement("li");
+    newList.innerText = num.value;
+    queue.appendChild(newList);
+    l++;
 }
 
-for (var i = 1; i < btn.length; i++){
-    if (i < 3){
-        btn[i].onclick = function(){
-            var tmp = i;
-            add(tmp);
-        };
-    }
+btn[3].onclick =function() {
+    var theFirstChild = queue.firstChild;
+    queue.removeChild(theFirstChild);
+    l--;
+}
 
-    else {
-        btn[i].onclick = function() {
-            del(i);
-        };
-    }
+btn[4].onclick = function() {
+    var theLastChild = queue.lastChild;
+    queue.removeChild(theLastChild);
+    l--;
+}
+
+function clickToDel() {
+    var parent = this.parent;
+    console.log(this);
+    parent.removeChild(this);
+}
+
+for (var i = 0; i < l; i++){
+    var list = document.getElementsByTagName("li");
+    list[i].onclick = clickToDel;
 }

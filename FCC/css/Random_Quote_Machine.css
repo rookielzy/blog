@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+main {
+    width: 600px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 30px;
+    margin-top: 5%;
+    position: relative;
+}
+
+#quote {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+#quote::before {
+    content: "\"";
+    font-size: 46px;
+}
+
+/*#weibo {
+
+}*/
+
+#change {
+    width: 100px;
+    height: 40px;
+    line-height: 36px;
+    border: none;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+.bgcolor {
+    background-color: #ccc;
+}
+
+footer {
+    width: 200px;
+    margin: 20px auto 0 auto;
+}
+
+footer a {
+    text-decoration: none;    
+    color: white;
+}
