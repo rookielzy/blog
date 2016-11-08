@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial;
+    color: white;
+    background-color: #161616;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+#position, #weather {
+    font-size: 30px;
+}
