@@ -1,0 +1,75 @@
+/*预定义样式*/
+
+.topnav {
+    background-color: rgba(10, 87, 155, 0.54);
+    color: black;
+    border: none;
+}
+
+.nav li:hover {
+    background-color: #f44d95;
+}
+
+.intro-header {
+    background: url('../images/wallhaven-123178.jpg') no-repeat center;
+    background-size: center;   
+    height: 860px; 
+    margin-top: 50px;
+}
+
+.intro-message {
+    margin-top: 150px;
+}
+
+.intro-message > h1 {
+    font-size: 80px;
+}
+
+.intro-message > hr {
+    border-top: 4px solid #ccc;
+}
+
+.list-inline button {
+    width: 150px;
+    height: 50px;
+    font-size: 24px;
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+    margin-top: 50px;
+}
+
+.list-inline button:hover {
+    background-color: black;
+    color: white;
+}
+
+.intro-about {
+    background: url('../images/72677b798d5e0b33eef91cf4d2d157fd_r.jpg');
+    background-size: center;   
+    height: 700px; 
+}
+
+.intro-text {
+    margin-top: 100px;
+}
+
+.intro-text h1 {
+    margin-top: 0;
+}
+
+.intro-text h4 {
+    line-height: 24px;
+}
+
+/*移动适配*/
+@media (max-width: 768px) {
+    .intro-header {
+        height: 750px;
+    }
+    .intro-message {
+        margin-top: 60px;
+    }
+    .self-pic {
+        margin-bottom: 20px;
+    }
+}
