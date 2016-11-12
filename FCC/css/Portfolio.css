@@ -39,12 +39,13 @@
 }
 
 .list-inline button:hover {
+    transition: background-color 2s;
     background-color: black;
     color: white;
 }
 
 .intro-about {
-    background: url('../images/72677b798d5e0b33eef91cf4d2d157fd_r.jpg');
+    background: url('../images/72677b798d5e0b33eef91cf4d2d157fd_r.jpg') no-repeat center;
     background-size: center;   
     height: 700px; 
 }
@@ -61,8 +62,35 @@
     line-height: 24px;
 }
 
+.project {
+    background: url('../images/stock-photo-145774837.jpg') center;
+    background-size: center;   
+    padding-top: 100px;
+    height: 1000px;
+}
+
+.project-pic {
+    width: 250px;
+    height: 250px;
+    margin-top: 200px;
+}
+
+.project-pic:hover {
+    transition: box-shadow 2s;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+}
+
+.contact {
+    height: 400px;
+}
+
+.footer {
+    background-color: #ccc;
+    text-align: center;
+}
+
 /*移动适配*/
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
     .intro-header {
         height: 750px;
     }
@@ -71,5 +99,8 @@
     }
     .self-pic {
         margin-bottom: 20px;
+    }
+    .project-pic {
+        margin-top: 20px;
     }
 }
