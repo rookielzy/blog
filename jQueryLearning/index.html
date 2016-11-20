@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../javascripts/jquery-2.2.1.min.js"></script>
+        <script src="main.js"></script>
+        <script type="text/javascript">
+            document.domain = 'damonare.cn';//设置成主域
+            function test(){
+                alert(document.getElementById('iframe').contentWindow);//contentWindow 可取得子窗口的 window 对象
+            }
+        </script>
+        <style>
+            /*ul {
+                width: 400px;
+            }
+            ul li {
+                list-style: none;
+                display: inline-block;
+                padding: 40px;
+            }*/
+            /*.content {
+                display: none;
+            }*/
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .v_show {
+                width: 800px;
+                margin: 0 auto;
+                border: 1px solid #ccc;
+                height: 160px;
+                overflow: hidden;
+            }
+            .v_caption {
+                background-color: #ccc;
+                height: 60px;
+            }
+
+            .highlight_tip, .change_btn {
+                display: inline-block;
+            }
+            .change_btn span {
+                width: 0;
+                height: 0;
+                margin: 10px;
+            }
+            .prev {
+                border-right: 10px solid black;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+            }
+            .next {
+                border-left: 10px solid black;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+            }
+            ul li {
+                list-style: none;
+                display: inline-block;
+                padding:0 30px;
+            }
+            .v_content_list img {
+                width: 100px;
+                height: 100px;
+            }
+            .current {
+                color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <!--<p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <table border="1px" style="width: 100px" id="tb">
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>             
+            </tbody>
+        </table>
+        <input type="checkbox" class="btn" name="age" checked>1
+        <input type="checkbox" class="btn" name="age">2
+        <input type="checkbox" class="btn" name="age" checked>3       -->
+        <!--<div class="SubCategoryBox">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li><a href="#">11</a></li>
+                <li><a href="#">12</a></li>
+                <li><a href="#">13</a></li>
+                <li><a href="#">14</a></li>
+            </ul>
+            <div class="showmore">
+                <a href="more.html"><span>All Lab</span></a>
+            </div>
+        </div>-->
+        <!--<div>
+            <p><a href="#" class="tooletip" title="This is my Hyber link tips 1">tips 1</a></p>
+            <p><a href="#" class="tooletip" title="This is my Hyber link tips 2">tips 2</a></p>
+            <p><a href="#" title="This is self tips 1">self tips 1</a></p>
+            <p><a href="#" title="This is self tips 2">self tips 2</a></p>
+        </div>-->
+
+        <!--<div id="panel">
+            <h5 class="head">What is jQuery</h5>
+            <div class="content">
+                jQuery is blabablalbalbalblblbalbalbalblablablablablalbalbablalbalblblablalblalbalblablalb
+            </div>
+        </div>-->
+
+        <!--<div class="v_show">
+            <div class="v_caption">
+                <h2 class="cartoon" title="cartoon">cartoon</h2>
+                <div class="highlight_tip">
+                    <span class="current">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                </div>
+                <div class="change_btn">
+                    <span class="prev"></span>
+                    <span class="next"></span>
+                </div>
+                <em><a href="#">more</a></em>
+            </div>
+            <div class="v_content">
+                <div class="v_content_list">
+                    <ul>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="D:\blog\images\self-pic.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>-->
+
+
+        <input type="button" value="Ajax get" id="send"/>
+        <div class="comment">commented:</div>
+        <div id="resText"></div>
+    </body>
+</html>
