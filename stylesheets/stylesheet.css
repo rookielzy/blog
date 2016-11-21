@@ -1,8 +1,4 @@
 /*预定义样式*/
-* {
-    margin: 0;
-    padding: 0;
-}
 
 body {
     background-color: rgba(204, 204, 204, 0.3);
@@ -28,10 +24,32 @@ body {
 }
 #self hr {
     border-top: 3px solid #ccc;
-    width: 600px;
     margin:20px auto 20px auto;
 }
 #self p {
-    width: 400px;
-    margin:0 auto;
+    padding: 30px 50px 0 50px;
+}
+
+#fun {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.spin {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border: 5px solid #ccc;
+    display: inline-block;
+    background-image: -webkit-radial-gradient(black 2px, transparent 2px);
+    background-size: 10px;
+    animation: spin 3s ease-in-out infinite;
+}
+
+@keyframes spin { 
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}    
 }
