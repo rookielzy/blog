@@ -4,7 +4,7 @@ function convertHTML(str) {
         '<': '&lt;',
         '>': '&gt;',
         '"': '&quot;',
-        "'": ';'
+        "'": '&apos;'
     };
     var newstr = str.split('').map(function(element) {
         return htmlEntities[element] || element;
