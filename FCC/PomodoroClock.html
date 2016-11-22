@@ -9,13 +9,17 @@
     <body>
         <main class="app">
             <h1>Pomodoro Clock</h1>
-            <div class="break">BREAK LENGTH
+            <div class="break set">BREAK LENGTH
                 <input type="button" value="-"><span>5</span><input type="button" value="+">
             </div>
-            <div class="session">SESSION LENGTH
+            <div class="session set">SESSION LENGTH
                 <input type="button" value="-"><span>25</span><input type="button" value="+">
             </div>
-            <div class="clock"></div>
+            <!--todo use :after to add a background layout when the time go-->
+            <div class="clock">
+                <span class="title">Session</span>
+                <span class="timeLeft">25:00</span>
+            </div>
         </main>
     </body>
 </html>

@@ -11,3 +11,43 @@
     margin: 0 auto;
     text-align: center;
 }
+
+.set {
+    width: 170px;
+    display: inline-block;
+}
+
+.set input {
+    width: 50px;
+    height: 50px;
+    border: none;
+    font-size: 42px;
+    color: white;
+    margin: 0 5px;
+}
+
+.set span {
+    font-size: 36px;
+}
+
+.clock {
+    border: 2px solid aqua;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    margin: 40px auto 0 auto;
+    font-size: 36px;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 50px;
+    left: 75px;
+}
+
+.timeLeft {
+    width:40px;
+    position: relative;
+    top: 200px
+}
