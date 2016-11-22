@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    background-color: lightslategray;
+}
+
+.app {
+    max-width: 1200px;
+    min-width: 600px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
