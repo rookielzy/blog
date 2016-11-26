@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>图片列表：鼠标移入移出改变图片透明度</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            table {
+                border: 1px solid black;
+                width: 1098px;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+            img {
+                padding: 17.5px;
+                border: 1px solid black;
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="http://tse2.mm.bing.net/th?id=OIP.M12190db43f7994e00ba897817a6d2b94o1&pid=15.1" alt="" class="pic">
+                        <img src="http://tse2.mm.bing.net/th?id=OIP.M12190db43f7994e00ba897817a6d2b94o1&pid=15.1" alt="" class="pic">
+                        <img src="http://tse2.mm.bing.net/th?id=OIP.M12190db43f7994e00ba897817a6d2b94o1&pid=15.1" alt="" class="pic">
+                        <img src="http://tse2.mm.bing.net/th?id=OIP.M12190db43f7994e00ba897817a6d2b94o1&pid=15.1" alt="" class="pic">
+                        <img src="http://tse2.mm.bing.net/th?id=OIP.M12190db43f7994e00ba897817a6d2b94o1&pid=15.1" alt="" class="pic">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="http://tse2.mm.bing.net/th?id=OIP.M12190db43f7994e00ba897817a6d2b94o1&pid=15.1" alt="" class="pic">
+                        <img src="http://tse2.mm.bing.net/th?id=OIP.M12190db43f7994e00ba897817a6d2b94o1&pid=15.1" alt="" class="pic">
+                        <img src="http://tse2.mm.bing.net/th?id=OIP.M12190db43f7994e00ba897817a6d2b94o1&pid=15.1" alt="" class="pic">
+                        <img src="http://tse2.mm.bing.net/th?id=OIP.M12190db43f7994e00ba897817a6d2b94o1&pid=15.1" alt="" class="pic">
+                        <img src="http://tse2.mm.bing.net/th?id=OIP.M12190db43f7994e00ba897817a6d2b94o1&pid=15.1" alt="" class="pic">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            var pic = document.getElementsByClassName("pic");
+            function changeOpa() {
+                this.style.opacity = 1;
+            }
+            function reset() {
+                this.style = "";
+            }
+            for (var i = 0; i < pic.length; i++){
+                pic[i].onmouseover = changeOpa;
+                pic[i].onmouseout = reset;
+            }
+        </script>
+    </body>
+</html>

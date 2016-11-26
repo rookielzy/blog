@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>判断数字是否为两位数</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            form {
+                width: 200px;
+                margin: 20px auto 0 auto;
+            }
+            input[type="text"] {
+                width: 50px;
+                height: 20px;
+                background-color: #ccc;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <input type="text" id="num">
+            <input type="button" value="是否为两位数" id="submit">
+        </form>
+        <script>
+            var num = document.getElementById("num"),
+                submit = document.getElementById("submit");
+            num.onkeyup = function() {
+                num.value = num.value.replace(/[\D | (0)]/,"");
+            }
+            var tmp = num.length;
+            submit.onclick = function() {
+                if (tmp.length === 2){
+                    alert("这是两位数");
+                }
+                else{
+                    alert("这是" + tmp.length + "位数");
+                }
+            }
+        </script>
+    </body>
+</html>

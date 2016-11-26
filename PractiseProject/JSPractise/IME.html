@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>输入法选择</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            form {
+                width: 200px;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+            #ime {
+                margin-bottom: 20px;
+            }
+            ul {
+                border: 1px solid blue;
+                width: 60px;
+                display: none;
+            }
+            ul li {
+                list-style: none;
+                width: 60px;
+                height: 30px;
+                line-height: 25px;
+                color: blue;
+            }
+            ul li:last-child {
+                border-top: 1px solid blue;
+            }
+            ul li:hover {
+                background-color: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <input type="button" value="输入法" id="ime">
+            <div>
+                <ul id="choose">
+                    <li>手写</li>
+                    <li>拼音</li>
+                    <li>关闭</li>
+                </ul>
+            </div>
+        </form>
+        <script>
+            var choose = document.getElementById("choose");
+            var ime = document.getElementById("ime");
+            function toggle() {
+                if (choose.style["display"] !== "block"){
+                    choose.style["display"] = "block";
+                }
+                else{
+                    choose.style["display"] = "none";
+                }
+            };
+            ime.addEventListener("click",toggle, false);
+        </script>
+    </body>
+</html>
