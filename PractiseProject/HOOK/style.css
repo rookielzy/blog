@@ -73,3 +73,57 @@ a {
     transform: rotate(90deg);
     font-size: 50px;
 }
+
+.intro {
+    font-size: 30px;
+    text-align: center;
+}
+
+.intro h2 {
+    color: orange;
+    font-size: 24px;
+}
+
+.intro h2::before, .intro h2::after {
+    content: " ";
+    width: 50px;
+    border-top: 1px solid orange;
+}
+
+.about article {
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.about article img {
+    width: 400px;
+}
+
+.branding {
+    width: 400px;
+    height: 8px;
+    background-color: #ccc;
+}
+
+.branding div {
+    background-color: black;
+    width: 320px;
+    height: 8px;
+}
+
+.branding div::before {
+    content: "BRANDING";
+    position: relative;
+    top: -16px;
+}
+
+.branding div::after {
+    content: "80%";
+    position: relative;
+    top: -16px;
+    right: -204px;
+}
+
+.intro-msg {
+    height: 400px;
+}
