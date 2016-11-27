@@ -82,6 +82,7 @@ a {
 .intro h2 {
     color: orange;
     font-size: 24px;
+    display: inline-block;
 }
 
 .intro h2::before, .intro h2::after {
@@ -165,5 +166,45 @@ article:nth-child(2) {
 
 .achi-detail li span:nth-child(2n) {
     font-size: 40px;
+    font-weight: 600;
+}
+
+.intro p {
+    font-size: 14px;
+}
+
+.line-left {
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background: #ccc;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.line-right {
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background: #ccc;
+    margin-left: 5px;
+    margin-bottom: 5px;  
+}
+
+
+/*todo add project preview*/
+.project {
+    height: 600px;
+}
+
+.project button {
+    color :white;
+    background-color: black;
+    border: none;
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    margin-left: -130px;
     font-weight: 600;
 }
