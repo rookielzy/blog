@@ -127,7 +127,7 @@ article:nth-child(2) {
 
 .intro-msg {
     width: 400px;
-    height: 400px;
+    height: 300px;
     margin-left: 40px;    
     float: left;
 }
@@ -136,4 +136,34 @@ article:nth-child(2) {
     float: right;
     margin-right: 40px;
     
+}
+
+.achievment {
+    clear: both;
+    text-align: center;
+    background-image: -webkit-radial-gradient(#93fdaa,#d7c5f9);
+    height: 500px;
+    padding-top: 50px;
+    color: white;
+}
+
+.achi-detail {
+    position: relative;
+    top: 150px;
+}
+
+.achi-detail li {
+    list-style: none;
+    width: 200px;
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.achi-detail li span {
+    display: block;
+}
+
+.achi-detail li span:nth-child(2n) {
+    font-size: 40px;
+    font-weight: 600;
 }
