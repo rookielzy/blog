@@ -90,7 +90,7 @@ a {
     border-top: 1px solid orange;
 }
 
-.about article {
+article:nth-child(2) {
     column-count: 2;
     column-gap: 20px;
 }
@@ -109,6 +109,7 @@ a {
     background-color: black;
     width: 320px;
     height: 8px;
+    margin-top: 40px;
 }
 
 .branding div::before {
@@ -125,5 +126,14 @@ a {
 }
 
 .intro-msg {
+    width: 400px;
     height: 400px;
+    margin-left: 40px;    
+    float: left;
+}
+
+.skill-detail {
+    float: right;
+    margin-right: 40px;
+    
 }
