@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="..\javascripts\jquery-2.2.1.min.js"></script>
+    </head>
+    <body>
+        <button type="button">Click to get data</button>
+        <script>
+            $(document).ready(function() {
+                $('button').click(function() {
+                    $.post('https://api.megvii.com/facepp/v3/detect',
+                        {
+                            api_key: 'xoGiSlrdE0B6v-63JE_oFe9--FLbb2vL',
+                            api_secret: 'boHJ5efx-5wrc1HAkeDtPerE-Ezu3gC3',
+                            image_url: 'http://imgsrc.baidu.com/forum/w%3D580/sign=28a06bb78c1001e94e3c1407880f7b06/48540923dd54564e1934c667b2de9c82d1584f1e.jpg',
+                            return_attributes: 'gender,age,smiling,glass'
+                        },
+                        function(data) {
+                            console.log(data);
+                        }
+                    );
+                });
+            });
+        </script>
+    </body>
+</html>
