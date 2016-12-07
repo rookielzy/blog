@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                margin: 0;
+                background: #212121;
+            }
+            .pic, .yes {
+                width: 200px;
+                height: 200px;
+                text-align: center;
+                background: white;
+                margin: 0 auto;
+                margin-top: 100px;
+                position: absolute;
+                left: 20%;
+            }
+            .pic img {
+                width: 150px;
+                height: 150px;
+                margin-top: 20px;
+            }
+            .preserve-3d {
+                transform-style: preserve-3d;
+                -webkit-transform-style: preserve-3d;
+                perspective: 1000px;
+                transform-origin: 0 0;
+            }
+            .flip {
+                animation: flipBook1 17s;
+                z-index: 1;
+            }
+            @keyframes flipBook1 {
+                0% { transform: rotateY(0deg) }
+                50% { transform: rotateY(-160deg) }
+                100% { transform: rotateY(0deg) }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pic preserve-3d flip">
+            <img src="..\..\images\bg1_03.gif" alt="">
+        </div>
+        <div class="yes">yes</div>
+    </body>
+</html>
