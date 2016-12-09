@@ -30,11 +30,31 @@ var context = canvas.getContext('2d');
 
 // context.fillStyle = gradient;
 // context.fillRect(0, 0, canvas.width, canvas.height);
-image = new Image();
-image.src = "icon1.gif"
-image.onload = function() {
-    var pattern = context.createPattern(image, 'repeat-x');
-    context.fillStyle = pattern;
-    context.fillRect(0, 0, canvas.width, canvas.height);
-    context.fill();
-};
+
+// Repeat
+// image = new Image();
+// image.src = "icon1.gif"
+// image.onload = function() {
+//     var pattern = context.createPattern(image, 'repeat-x');
+//     context.fillStyle = pattern;
+//     context.fillRect(0, 0, canvas.width, canvas.height);
+//     context.fill();
+// };
+
+// Shadow
+// context.fillStyle = "black";
+// context.strokeStyle = "black";
+// context.lineWidth = 5;
+// context.fillRect(220, 220, 200, 200);
+// context.strokeRect(10, 10, 200, 200);
+// context.shadowColor = "red";
+// context.shadowBlur = 20;
+// context.shadowOffsetX = 15;
+// context.shadowOffsetY = 15;
+
+context.beginPath();
+
+context.fillRect(10, 10, 100, 100);
+context.closePath();
+// context.beginPath();
+context.fillRect(50, 50, 100, 100);
