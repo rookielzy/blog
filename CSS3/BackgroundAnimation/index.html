@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Background Animation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                height: 100%;
+                width: 100%;
+            }
+            body {
+                background-image: -webkit-gradient(linear, left top, left bottom, #a8a8e4, #8bd46d);
+                background-image: -webkit-linear-gradient(top, #a8a8e4, #8bd46d);
+                background-image: -moz-linear-gradient(top, #a8a8e4, #8bd46d);
+                background-image: linear-gradient(to bottom, #a8a8e4, #8bd46d);
+            }
+            .cube {
+                border: 10px solid #f76168;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                animation: spin 12s ease-in infinite;
+                opacity: 0;
+            }
+            .cube:nth-child(1) {
+                left: 10%;
+                top: 10%;
+                width: 100px;
+                height: 100px;
+                animation-delay: 2s;
+                
+            }
+            .cube:nth-child(2) {
+                left: 80%;
+                top: 13%;
+                animation-delay: 4s;                
+            }
+            .cube:nth-child(3) {
+                left: 60%;
+                top: 30%;
+                width: 200px;
+                height: 200px;
+                animation-delay: 6s;
+
+            }
+            .cube:nth-child(4) {
+                left: 30%;
+                top: 50%;
+                width: 150px;
+                height: 150px;
+                animation-delay: 8s;
+
+            }
+            .cube:nth-child(5) {
+                left: 75%;
+                top: 80%;
+                width: 120px;
+                height: 120px;
+                animation-delay: 10s;
+
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); opacity: 0; }
+                25% { transform: rotate(90deg); opacity: .4; }
+                50% { transform: rotate(180deg); opacity: .8; }
+                75% { transform: rotate(270deg); opacity: .4;}
+                100% { transform: rotate(360deg); opacity: 0; }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+    </body>
+</html>
