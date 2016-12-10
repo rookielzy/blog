@@ -8,10 +8,16 @@
 /*side bar start*/
 .side-bar {
     margin-top: 51px;
-    height: 100%;
+    height: 700px;
 }
 /*side bar end*/
 
+/*main page start*/
+.main-page {
+    margin-left: 250px;
+    margin-top: -20px;
+}
+/*main page end*/
 
 @media (min-width: 768px) {
     /*side bar start*/
