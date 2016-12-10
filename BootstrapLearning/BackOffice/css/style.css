@@ -1,0 +1,25 @@
+/*top navbar right start*/
+.navbar-right {
+    margin-right: 20px;
+}
+/*top navbar right end*/
+
+
+/*side bar start*/
+.side-bar {
+    margin-top: 51px;
+    height: 100%;
+}
+/*side bar end*/
+
+
+@media (min-width: 768px) {
+    /*side bar start*/
+    .side-bar {
+        width: 250px;
+        margin-top: 51px;
+        position: absolute;
+        z-index: 1;
+    }
+    /*side bar end*/
+}

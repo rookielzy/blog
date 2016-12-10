@@ -15,8 +15,10 @@
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!--Navbar-->
     <nav class="navbar navbar-default navbar-static-top">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed">
@@ -29,10 +31,69 @@
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="badge">23</span></a></li>
-        <li><a href="#"><i class="fa fa-user-times" aria-hidden="true"></i>Logout</a></li>
+        <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></i>Signout</a></li>
       </ul>
+
+      <!--Side Navbar-->
+      <div class="navbar-default nav-collapsed side-bar">
+        <ul class="nav">
+          <li>
+            <!--Search-->
+            <div class="input-group">
+              <input type="text" class="form-control" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </li>
+          <!--System bar-->
+          <li>
+            <a href="#sub1" data-toggle="collapse">System<i class="fa fa-sort-desc pull-right" aria-hidden="true"></i></a>
+            <ul id="sub1" class="nav collapse">
+              <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp System Info</a></li>
+              <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp Administrator</a></li>
+              <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp Dairy Info</a></li>
+              <li><a href="#"><i class="fa fa-sort-asc" aria-hidden="true"></i>&nbsp Back</a></li>
+            </ul>
+          </li>
+          <!--Banner bar-->
+          <li>
+            <a href="#sub2" data-toggle="collapse">Banner1<i class="fa fa-sort-desc pull-right" aria-hidden="true"></i></a>
+            <ul id="sub2" class="nav collapse">
+              <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp System Info</a></li>
+              <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp Administrator</a></li>
+              <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp Dairy Info</a></li>
+              <li><a href="#"><i class="fa fa-sort-asc" aria-hidden="true"></i>&nbsp Back</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#sub3" data-toggle="collapse">Banner2<i class="fa fa-sort-desc pull-right" aria-hidden="true"></i></a>
+            <ul id="sub3" class="nav collapse">
+              <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp System Info</a></li>
+              <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp Administrator</a></li>
+              <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp Dairy Info</a></li>
+              <li><a href="#"><i class="fa fa-sort-asc" aria-hidden="true"></i>&nbsp Back</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#sub4" data-toggle="collapse">Banner3<i class="fa fa-sort-desc pull-right" aria-hidden="true"></i></a>
+            <ul id="sub4" class="nav collapse">
+              <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp System Info</a></li>
+              <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp Administrator</a></li>
+              <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp Dairy Info</a></li>
+              <li><a href="#"><i class="fa fa-sort-asc" aria-hidden="true"></i>&nbsp Back</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </nav>
 
+    <!--Main Page-->
+    <div class="main-page">
+      
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
