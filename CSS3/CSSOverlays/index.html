@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS Overlays</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            ul li {
+                list-style: none;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                width: 320px;
+                height: 200px;
+                position: relative;
+                overflow: hidden;
+            }
+            .resource {
+                width: 320px;
+                height: 200px;
+            }
+            .overlays {
+                background-color: rgba(0,0,0,0.5);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                opacity: 0;
+                transform: translateY(100%);
+                transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+            li:hover .overlays, li:hover .overlays1  {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            .overlays1 {
+                background-color: rgba(0,0,0,0.5);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                transform: translateY(-100%);
+                transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+            .overlays2 {
+                background-color: rgba(0,0,0,0.5);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                transform: translateX(-100%);
+                transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+            li:hover .overlays2, li:hover .overlays3 {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+            .overlays3 {
+                background-color: rgba(0,0,0,0.5);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                transform: translateX(100%);
+                transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+            .overlays4 {
+                background-color: rgba(0,0,0,0.5);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+            li:hover .overlays4 {
+                opacity: 1;
+            }
+            .overlays5 {
+                background-color: rgba(0,0,0,0.5);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: auto;
+                bottom: 0;
+                opacity: 0;
+                transform: rotateY(90deg);
+                transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+            li:hover .overlays5 {
+                opacity: 1;
+                transform: rotateY(0deg);
+            }
+            .overlays6 {
+                background-color: rgba(0,0,0,0.5);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: auto;
+                bottom: 0;
+                opacity: 0;
+                transform: rotateX(90deg);
+                transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+            li:hover .overlays6 {
+                opacity: 1;
+                transform: rotateX(0deg);
+            }
+            .overlays7 {
+                background-color: rgba(0,0,0,0.5);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: auto;
+                bottom: 0;
+                opacity: 0;
+                transform: scale(0);
+                transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+            li:hover .overlays7 {
+                opacity: 1;
+                transform: scale(1);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <span>Slid Up</span><li><img src="v.jpg" class="resource"><div class="overlays"></div></li>
+                <span>Slid Down</span><li><img src="v.jpg" class="resource"><div class="overlays1"></div></li>
+                <span>Slid Right</span><li><img src="v.jpg" class="resource"><div class="overlays2"></div></li>
+                <span>Slid Left</span><li><img src="v.jpg" class="resource"><div class="overlays3"></div></li>
+                <span>Fade</span><li><img src="v.jpg" class="resource"><div class="overlays4"></div></li>
+                <span>Rotate Y</span><li><img src="v.jpg" class="resource"><div class="overlays5"></div></li>
+                <span>Rotate X</span><li><img src="v.jpg" class="resource"><div class="overlays6"></div></li>
+                <span>Scale</span><li><img src="v.jpg" class="resource"><div class="overlays7"></div></li>
+            </ul>
+        </div>
+    </body>
+</html>
