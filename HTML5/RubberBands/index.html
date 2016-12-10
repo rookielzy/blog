@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rubber Bands</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                background-color: #eee;
+            }
+            #controls {
+                position: absolute;
+                left: 25px;
+                top: 25px;
+            }
+            #canvas {
+                background: #fff;
+                cursor: pointer;
+                margin-left: 10px;
+                margin-top: 10px;
+                box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" width="600" height="400"></canvas>
+
+        <div id="controls">
+            Stroke color: <select id="strokeStyleSelect">
+                <option value="red">red</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+                <option value="orange">orange</option>
+            </select>
+
+            Guidewires:
+            <input type="checkbox" id="guidewireCheckbox" checked />
+            <input type="button" id="eraseAllButton" value="Erase all" />
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

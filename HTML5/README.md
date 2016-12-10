@@ -33,3 +33,8 @@
 1. arc(x, y, radius, startAngle, endAngle, anticlockwise);
 2. beginPath() method of the Canvas 2D API starts a new path by emptying the list of sub-paths. 
 3. closePath() method of the Canvas 2D API causes the point of the pen to move back to the start of the current sub-path. It tries to add a straight line (but does not actually draw it) from the current point to the start. If the shape has already been closed or has only one point, this function does nothing.
+
+
+### Line
+1. moveTo(x, y); method of the Canvas 2D API moves the starting point of a new sub-path to the (x, y) coordinates.
+2. lineTo(x, y);  method of the Canvas 2D API connects the last point in the sub-path to the x, y coordinates with a straight line (but does not actually draw it).
