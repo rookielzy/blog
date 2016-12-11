@@ -1,0 +1,48 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(#7fded5, #b73778);
+}
+
+/*全局基本样式 start*/
+.drum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.key {
+    width: 100px;
+    height: 80px;
+    border: 4px solid black;
+    border-radius: 5px;
+    margin: 0 20px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+}
+/*全局基本样式 end*/
+
+
+kbd {
+    font-size: 30px;
+    display: block;
+    padding: 5px;
+}
+
+.sound {
+    color: gold;
+}
+
+.playing {
+    transform: scale(1.1);
+    border: 4px solid gold;
+    box-shadow: 0px 0px 5px black;
+    transition: border .07s, scale .07s, box-shadow .07s;
+}
