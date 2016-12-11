@@ -31,10 +31,15 @@
 
 ### Path
 1. arc(x, y, radius, startAngle, endAngle, anticlockwise);
-2. beginPath() method of the Canvas 2D API starts a new path by emptying the list of sub-paths. 
-3. closePath() method of the Canvas 2D API causes the point of the pen to move back to the start of the current sub-path. It tries to add a straight line (but does not actually draw it) from the current point to the start. If the shape has already been closed or has only one point, this function does nothing.
+2. arcTo(x1, y1, x2, y2, radius); method of the Canvas 2D API adds an arc to the path with the given control points and radius, connected to the previous point by a straight line.
+3. beginPath() method of the Canvas 2D API starts a new path by emptying the list of sub-paths. 
+4. closePath() method of the Canvas 2D API causes the point of the pen to move back to the start of the current sub-path. It tries to add a straight line (but does not actually draw it) from the current point to the start. If the shape has already been closed or has only one point, this function does nothing.
 
 
 ### Line
 1. moveTo(x, y); method of the Canvas 2D API moves the starting point of a new sub-path to the (x, y) coordinates.
 2. lineTo(x, y);  method of the Canvas 2D API connects the last point in the sub-path to the x, y coordinates with a straight line (but does not actually draw it).
+3. lineCap end point default: butt. round square
+4. lineWidth
+5. lineJoin default: bevel. round miter
+6. miterLimit property of the Canvas 2D API sets the miter limit ratio in space units. When getting, it returns the current value (10.0 by default). When setting, zero, negative, Infinity and NaN values are ignored; otherwise the current value is set to the new value.
