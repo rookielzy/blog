@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background-image: linear-gradient(-45deg, rgba(236, 125, 125, 0.67), rgba(120, 234, 203, 0.67));
+            }
+            body {
+                box-sizing: border-box;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .contact {
+                width: 500px;
+                height: 350px;
+                margin: 200px auto;
+                border: 1px solid #eee;
+                box-shadow: 1px 1px 30px #eee;
+                position: relative;
+                background-color: white;
+                /*perspective: 600px;*/
+                transition: transform 1s ease-in;
+            }
+            .contact h1 {
+                margin: 0;
+                height: 80px;
+                /*background-image: linear-gradient(to bottom, rgba(204, 204, 204, 0.5), rgba(238, 238, 238, 0.5));*/
+                background-color: rgba(204, 204, 204, 0.4);
+                font-weight: 200;
+                text-indent: 50px;
+                letter-spacing: 10px;
+                line-height: 80px;
+            }
+            .details, .pic {
+                display: inline-block;
+                position: absolute;
+            }
+            .details {
+                left: 20px;
+            }
+            .pic {
+                width: 200px;
+                height: 200px;
+                border: 1px solid #eee;
+                box-shadow: 1px 1px 20px #eee;
+                right: 0;
+                bottom: 20px;
+                background: transparent;
+                transform: translateX(30px);
+                transition: transform 1s ease-in;
+            }
+            .right-top, .left-bottom {
+                position: absolute;
+            }
+            .right-top {
+                width: 50px;
+                height: 50px;
+                border-top: 6px solid #eee;
+                border-right: 6px solid #eee;
+                top: 0;
+                right: 0;
+                transform: translate(30px, -30px);
+                transition: transform 1s ease-in;                
+            }
+            .left-bottom {
+                width: 50px;
+                height: 50px;
+                border-left: 6px solid #eee;
+                border-bottom: 6px solid #eee;
+                left: 0;
+                bottom: 0;
+                transform: translate(-30px, 30px);       
+                transition: transform 1s ease-in;                 
+            }
+            .contact:hover .right-top, .contact:hover .left-bottom, .contact:hover .pic {
+                transform: translate(0, 0);
+                transition: transform 1s ease-in;
+            }
+            .contact:hover {
+                transform: rotateX(140deg);
+                opacity: 0.5;                
+                transition: transform 1s ease-in, opacity 1s ease-in;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contact">
+            <h1>CONTACT</h1>
+            <div class="details">
+                <h4>Phone</h4><span>123456789</span>
+                <h4>Email</h4><span>examply@163.com</span>
+                <h4>WeChat</h4><span>SlimJetL</span>
+            </div>
+            <div class="pic"></div>
+            <div class="right-top"></div>
+            <div class="left-bottom"></div>
+        </div>
+    </body>
+</html>
