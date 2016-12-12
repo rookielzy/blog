@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Equal Love</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html {
+                width: 100%;
+                height: 100%;
+            }
+            body {
+                background-color: #262e6f
+            }
+            .love {
+                display: flex;
+                width: 200px;
+                height: 120px;
+                justify-content: center;
+                align-items: center;
+                flex-flow: row;
+                margin: 300px auto;
+                position: relative;
+            }
+            .color-line {
+                width: 10px;
+                height: 10px;
+                border-radius: 10px;
+                background: black;
+                position: absolute;
+                top: 55px;
+            }
+            /*No.1 9 child start*/
+            .color-line:nth-child(1), .color-line:nth-child(9) {
+                animation: expand1 3s infinite alternate;
+                background-color: #ec2d73;
+                left: 0;
+            }
+            @keyframes expand1 {
+                from {height: 10px; top: 55px;}
+                to {height: 30px; top: 40px;}
+            }
+            /*No.1 9 child end*/
+
+            /*No.2 8 child start*/
+            .color-line:nth-child(2), .color-line:nth-child(8) {
+                animation: expand2 3s infinite alternate;
+                background-color: #eb5324;                
+                left: 15px;
+            }
+            @keyframes expand2 {
+                from {height: 10px; top: 55px;}
+                to {height: 55px; top: 35px;}
+            }
+            /*No.2 8 child end*/
+            
+            /*No.3 7 child start*/            
+            .color-line:nth-child(3), .color-line:nth-child(7) {
+                animation: expand3 3s infinite alternate;
+                background-color: #fdc800;        
+                left: 30px;
+            }
+            @keyframes expand3 {
+                from {height: 10px; top: 55px;}
+                to {height: 75px; top: 25px;}
+            }
+            /*No.3 7 child end*/            
+            
+            /*No.4 6 child start*/            
+            .color-line:nth-child(4), .color-line:nth-child(6) {
+                animation: expand4 3s infinite alternate;
+                background-color: #61abb3;                
+                left: 45px;
+            }
+            @keyframes expand4 {
+                from {height: 10px; top: 55px;}
+                to {height: 75px; top: 35px;}
+            }
+            /*No.4 6 child end*/            
+
+            /*No.5 child start*/
+            .color-line:nth-child(5) {
+                animation: expand5 3s infinite alternate;     
+                background-color: #1470bd;                
+                left: 60px;           
+            }
+            @keyframes expand5 {
+                from {height: 10px; top: 55px;}
+                to {height: 75px; top: 45px;}
+            }
+            /*No.5 child end*/
+            .color-line:nth-child(6) {
+                left: 75px;
+            }
+            .color-line:nth-child(7) {
+                left: 90px;
+            }
+            .color-line:nth-child(8) {
+                left: 105px;
+            }
+            .color-line:nth-child(9) {
+                left: 120px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="love">
+            <div class="color-line"></div>
+            <div class="color-line"></div>
+            <div class="color-line"></div>
+            <div class="color-line"></div>
+            <div class="color-line"></div>
+            <div class="color-line"></div>
+            <div class="color-line"></div>
+            <div class="color-line"></div>
+            <div class="color-line"></div>
+        </div>
+    </body>
+</html>
