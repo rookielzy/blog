@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <script>
+
+        // ------------- Fake Object -------------
+        // var CheckObject = function() {
+        //     return {
+        //         checkName: function() {
+        //             alert('name');
+        //             return this;           
+        //         },
+        //         checkEmail: function() {
+        //             alert('email');
+        //             return this;
+        //         },
+        //         checkPassword: function() {
+        //             alert('password');
+        //             return this;
+        //         }
+        //     }
+        // }
+
+        // ------------- True Object -------------
+
+        // var a = CheckObject();
+        // a.checkEmail().checkName().checkPassword();
+
+        // var CheckObject = function() {
+        //     this.checkName = function() {
+        //         alert('name');
+        //         return this;
+        //     };
+        //     this.checkEmail = function() {
+        //         alert('email');
+        //         return this;                
+        //     };
+        // }
+        // var b = new CheckObject();
+        // b.checkName().checkEmail();
+
+
+    //     Function.prototype.addMethod = function(name, fn) {
+    //         this[name] = fn;
+    //         console.log(this);
+    //         return this;
+    //     };
+    //     var Methods = function() {};
+    //     Methods.addMethod('checkName', function() {
+    //         alert('name');
+    //     });
+    //     Methods.checkName();
+    //    console.log(typeof Methods);
+       Object.prototype.add = function(name, fn) {
+           this[name] = fn;
+           return this;
+       }
+       var test = {};
+       test.add('check', function() {
+           alert('check');
+       });
+       test.check();
+    </script>
+    </body>
+</html>

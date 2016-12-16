@@ -8,9 +8,6 @@ var OUTER_CIRCLE = {
     strokeStyle: 'blue'
 };
 
-var INNER_CIRCLE = {
-    x: 200,
-};
 
 function drawCircle(x, y, r, startAngle, endAngle, strokeStyle) {
     context.beginPath();
@@ -33,5 +30,28 @@ function drawSecond(x, y, r, startAngle, endAngle, strokeStyle) {
     context.closePath();
 }
 
-function drawNiddle() {}
+function drawNiddle(x, y, strokeStyle, lineWidth) {
+    context.beginPath();
+    // move to the center
+    context.moveTo(200, 200);
+    context.lineWidth = lineWidth;
+    context.lineTo(x, y);
+    context.stroke();
+    context.closePath();
+}
 
+
+setInterval(function() {
+    var time = new Date();
+    var secEndAngle = (time.getSeconds() * Math.PI / 30) - 0.5*Math.PI + 1/30*Math.PI;
+    var minEndAngle = (time.getMinutes() * Math.PI / 30) - 0.5*Math.PI;
+    // time.setHours(3);
+    var hourEndAngle = (time.getHours()/2 * Math.PI / 6) - 0.5*Math.PI;
+    // hourEndAngle = time.getHours();
+    // console.log(secEndAngle);
+    console.log(hourEndAngle);
+    
+    // drawSecond(200, 200, 140, -0.5*Math.PI, secEndAngle, 'red');
+    // drawSecond(200, 200, 120, -0.5*Math.PI, minEndAngle, 'pink');    
+    drawSecond(200, 200, 140, -0.5*Math.PI, hourEndAngle, 'red');    
+}, 1000);
