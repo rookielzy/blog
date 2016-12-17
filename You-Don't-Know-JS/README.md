@@ -142,6 +142,8 @@ alert(SuperClass.prototype);
 
 ## Ch03 
 
+> 适用于创建较少的类
+
 ```javascript
 // 定义基类
 var Basketball = function() {
@@ -185,4 +187,59 @@ function createPop(type, text) {
         // different part
     }
 }
+```
+
+
+## Ch04 
+
+> 适用于创建较多的类
+
+```javascript
+// 安全模式创建的工厂类
+var Factory = function(type, content) {
+    if (this instanceof Factory) {
+        var s = new this[type](content);
+        return s;
+    } else {
+        return new Factory(type, content);
+    }
+}
+// 工厂原型中设置创建所有类型数据对象的基类
+Factory.prototype = {
+    Java: function(content) {
+        alert(content);
+    },
+    UI: function(content) {
+        alert(content);
+    }
+    // more
+}
+
+Factory('Java', 'javatest');
+
+var BtnFactory = function(type, content) {
+    if (this instanceof BtnFactory) {
+        var s = new this[type](content);
+        return s;
+    } else {
+        return new BtnFactory(type, content);
+    }
+}
+
+BtnFactory.prototype = {
+    AlertBtn: function(content) {
+        this.content = content;
+        (function(content) {
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.style.width = '100px';
+            button.style.height = '100px';        
+            button.style.border = '1px solid red';
+            button.innerText = content;
+            document.getElementsByTagName('body')[0].appendChild(button);
+        }(content));
+    }
+}
+console.log(BtnFactory('AlertBtn', 'alert'));
+
 ```
