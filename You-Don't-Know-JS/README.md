@@ -139,3 +139,50 @@ alert(SuperClass.prototype);
         return target;
     }
 ```
+
+## Ch03 
+
+```javascript
+// 定义基类
+var Basketball = function() {
+
+}
+Basketball.prototype = {
+
+}
+var Football = function() {
+
+}
+Football.prototype = {
+
+}
+// something like above
+
+// 工厂函数
+var SportFactory = function(name) {
+    switch(name) {
+        case 'NBA':
+            return new Basketball();
+        case 'WorldCup':
+            return new Football();
+    }
+}
+// 以上使用实例化对象创建对象，如果这些类继承同一父类，那么他们的父类原型上的方法是可以共用的
+
+// 以下通过创建一个新对象，然后包装增强其属性和功能来实现。由于是使用寄生方式创建的对象都是一个新个体，他们父类的方法无法共用。
+function createPop(type, text) {
+    // 创建一个对象，并对对象拓展属性和方法
+    // same part
+    var o = new Object();
+    o.content = text;
+    o.show = function() {
+        
+    };
+    if (type == 'alert') {
+        // different part
+    }
+    if (type == 'confirm') {
+        // different part
+    }
+}
+```
