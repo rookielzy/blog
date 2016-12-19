@@ -243,3 +243,15 @@ BtnFactory.prototype = {
 console.log(BtnFactory('AlertBtn', 'alert'));
 
 ```
+
+## Ch05
+
+```javascript
+    // 抽象工厂方法
+    var VehicleFactory = function(subType, superType) {
+        // 判断抽象工厂中是否有该抽象类
+        function F() {};
+        F.property = new VehicleFactory[superType]();
+    }
+
+```
