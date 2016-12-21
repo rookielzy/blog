@@ -21,7 +21,7 @@ function getDateStr(dat) {
 function randomBuildData(seed) {
   var returnData = {};
   var dat = new Date("2016-01-01");
-  var datStr = ''
+  var datStr = '';
   for (var i = 1; i < 92; i++) {
     datStr = getDateStr(dat);
     returnData[datStr] = Math.ceil(Math.random() * seed);
@@ -45,6 +45,13 @@ var aqiSourceData = {
 // 用于渲染图表的数据
 var chartData = {};
 
+var graTime = document.querySelector('input[checked]');
+console.log(graTime)
+var citySelect = document.getElementById('city-select').value;
+console.log(citySelect);
+
+var bgColor = ['red', 'green', 'blue', 'black'];
+
 // 记录当前页面的表单选项
 var pageState = {
   nowSelectCity: -1,
@@ -54,24 +61,43 @@ var pageState = {
 /**
  * 渲染图表
  */
-var aqiChartWrap = document.getElementsByClassName("aqi-chart-wrap")[0],
-    city = document.getElementById("city-select"),
-    time = document.getElementsByName("gra-time");
-function renderChart() {
+// column: how many column should be rendered
+// metaData: is a Object, to send data
+// bgColor: column background-color
+function renderChart(column, metaData, bgColor) {
+  var divCol = ""; 
+  for (var i = 0; i < column; i++) {
+    var data = metaData[i];
+    divCol += '<div style="width:5px;display:inline-block;height:' + data + ';background-color:' + bgColor[parseInt(Math.random() * 4)] + '"></div>';
+  }
+  var aqiChartWrap = document.getElementsByClassName('aqi-chart-wrap')[0];
+  aqiChartWrap.innerHTML = divCol;
   
-  
-  
-
 }
+// renderChart(10, [30,40,50,60,70,80,90,10,20,60], bgColor); test done
 
 /**
  * 日、周、月的radio事件点击时的处理函数
  */
 function graTimeChange() {
   // 确定是否选项发生了变化 
-
+  if (graTime !== pageState.nowGraTime) {
+    pageState.nowGraTime = graTime;
+  }
   // 设置对应数据
+  // day: 1st to end of month console.log(parseInt(x.substring(8)));
+  // week: every 7 days
+  // month: every months
+  if (pageState.nowGraTime === 'day') {
+    // need city data
+    // need a count to stop loop
+    for (var i in aqiSourceData[city]) {
+      if (parseInt(x.substring(8)) === 31 && x.substring(5,8) ) {
 
+      }
+    }
+
+  }
   // 调用图表渲染函数
 }
 
