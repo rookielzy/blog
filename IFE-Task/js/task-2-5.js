@@ -91,6 +91,7 @@ function graTimeChange() {
   if (pageState.nowGraTime === 'day') {
     // need city data
     // need a count to stop loop
+    // odd < 8 31days, even < 8 31days, Feb 
     for (var i in aqiSourceData[city]) {
       if (parseInt(x.substring(8)) === 31 && x.substring(5,8) ) {
 
