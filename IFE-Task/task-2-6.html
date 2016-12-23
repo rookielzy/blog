@@ -4,36 +4,30 @@
         <meta charset="UTF-8">
         <title>task-2-6</title>
         <style>
-            input[type="button"] {
-                border-radius: 5px;
-                margin-left: 5px;
-                margin-right: 10px;
+            ul {
+                list-style: none;
+                margin: 20px 10px;
             }
-            #queue {
-                margin-top: 10px;
-            }
-            #queue li {
+            ul li {
                 background-color: red;
-                color: white;
+                color: black;
                 width: 50px;
                 height: 50px;
-                line-height: 50px;
-                font-size: 20px;
-                display: inline-block;
-                margin-left: 10px;
+                border: 1px solid black;
                 text-align: center;
+                line-height: 50px;
+                display: inline-block;
+                margin: 0 10px;
             }
         </style>
     </head>
     <body>
-        <input type="text" id="num">
+        <input type="text" id="inputNum">
         <input type="button" value="左侧入">
         <input type="button" value="右侧入">
         <input type="button" value="左侧出">
         <input type="button" value="右侧出">
-        <ul id="queue">
-            
-        </ul>
+        <ul id="queue"></ul>
         <script src="js/task-2-6.js"></script>
     </body>
 </html>

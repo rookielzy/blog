@@ -1,41 +1,51 @@
-var queue = document.getElementById("queue");
-var num = document.getElementById("num");
-var btn = document.getElementsByTagName("input");
-var l = 0;
-btn[1].onclick = function() {
-    var newList = document.createElement("li");
-    newList.innerText = num.value;
-    var theFirstChild = queue.firstChild;
-    queue.insertBefore(newList, theFirstChild);
-    l++;
+var inputNum = document.getElementById('inputNum');
+var queue = document.getElementById('queue');
+var typeClick = document.querySelectorAll('input[type=button]');
+
+// console.log(type);
+
+function leftIn() {
+    var li = document.createElement('li');
+    var value = inputNum.value;
+    li.innerText = value;
+    if (!queue.firstChild) {
+        queue.appendChild(li);
+    } else {
+        var firstChild = queue.firstChild;
+        queue.insertBefore(li, firstChild);
+    }
 }
 
-btn[2].onclick = function() {
-    var newList = document.createElement("li");
-    newList.innerText = num.value;
-    queue.appendChild(newList);
-    l++;
+function leftOut() {
+    if (!queue.firstChild) {
+        return;
+    } else {
+        var firstChild = queue.firstChild;
+        queue.removeChild(firstChild);
+    }
 }
 
-btn[3].onclick =function() {
-    var theFirstChild = queue.firstChild;
-    queue.removeChild(theFirstChild);
-    l--;
+function rightIn() {
+    var li = document.createElement('li');
+    var value = inputNum.value;    
+    li.innerText = value;
+    queue.appendChild(li);
 }
 
-btn[4].onclick = function() {
-    var theLastChild = queue.lastChild;
-    queue.removeChild(theLastChild);
-    l--;
+function rightOut() {
+    if (!queue.firstChild) {
+        return;
+    } else {
+        var lastChild = queue.lastChild;
+        queue.removeChild(lastChild);
+    }
 }
 
-function clickToDel() {
-    var parent = this.parent;
-    console.log(this);
-    parent.removeChild(this);
+function Opration() {
+    typeClick[0].addEventListener('click', leftIn, false);
+    typeClick[1].addEventListener('click', rightIn, false);
+    typeClick[2].addEventListener('click', leftOut, false);
+    typeClick[3].addEventListener('click', rightOut, false);    
 }
 
-for (var i = 0; i < l; i++){
-    var list = document.getElementsByTagName("li");
-    list[i].onclick = clickToDel;
-}
+Opration();

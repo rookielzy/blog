@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <input type='file' accept='image/*' onchange='openFile(event)'><br>
+        <img id='output'>
+        <p id="data"></p>
+        <script>
+            var openFile = function(event) {
+                var input = event.target;
+
+                var reader = new FileReader();
+                reader.onload = function(){
+                var dataURL = reader.result;
+                var output = document.getElementById('output');
+                var data = document.getElementById('data');
+                output.src = dataURL;
+                data.innerText = encodeURIComponent(output.src);
+                };
+                reader.readAsDataURL(input.files[0]);
+            };
+        </script>
+    </body>
+</html>
