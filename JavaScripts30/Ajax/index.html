@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ajax</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            function loadDoc() {
+                var request = null;
+                if (window.XMLHttpRequest) {
+                    request = new XMLHttpRequest();
+                } else {
+                    request = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                request.onreadystatechange = function() {
+                    if (request.readyState == 4 && request.status == 200) {
+                        document.getElementById('show').innerText = request.responseText;
+                    }
+                }
+                request.open('GET', 'test.txt', true); 
+                request.send(); 
+            }
+        </script>
+        <input type="button" value="test" onclick="loadDoc()">
+        <div id="show"></div>
+    </body>
+</html>
