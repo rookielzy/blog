@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web 留言板</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <textarea rows="10" cols="60" id="memo"></textarea><br>
+        <input type="button" value="Save">
+        <input type="button" value="Init">
+        <hr>
+        <p id="msg"></p>
+        <script>
+            var msg = document.getElementById('msg');
+            var btns = document.querySelectorAll('input[type=button]');
+            var memo = document.getElementById('memo');
+            function saveStorage() {
+                var data = memo.value;
+                var time = new Date().getTime();
+                localStorage.setItem(time, data);
+                alert('Save Data');
+                loadStorage();
+            }
+            function loadStorage() {
+                var result = '<table border="1"';
+                for (var i = 0; i < localStorage.length; i++) {
+                    var key = localStorage.key(i);
+                    var value = localStorage.getItem(key);
+                    var date = new Date();
+                    date.setTime(key);
+                    var datestr = date.toGMTString();
+                    result += '<tr><td>' + value +'</td><td>' + datestr + '</td></tr>';
+                }
+                result += '</table>';
+                msg.innerHTML = result;
+            }
+            function clearStorage() {
+                localStorage.clear();
+                alert('Clear All Data');
+                loadStorage();
+            }
+            btns[0].addEventListener('click', saveStorage, false);
+            btns[1].addEventListener('click', clearStorage, false);
+        </script>
+    </body>
+</html>
