@@ -30,7 +30,7 @@
     font-size: 36px;
 }
 
-.clock {
+#clock {
     border: 2px solid aqua;
     width: 300px;
     height: 300px;
