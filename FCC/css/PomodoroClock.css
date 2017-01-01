@@ -38,16 +38,31 @@
     margin: 40px auto 0 auto;
     font-size: 36px;
     position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .title {
     position: absolute;
     top: 50px;
     left: 75px;
+    background-color: transparent;
 }
 
 .timeLeft {
     width:40px;
     position: relative;
-    top: 200px
+    top: 200px;
+    background-color: transparent;
+}
+
+#overlay {
+    width: 350px;
+    height: 350px;
+    border: 1px solid black;
+    position: absolute;
+    top: 296px;
+    left: -25px;
+    background-color: black;
+    z-index: -1;    
 }

@@ -1,29 +1,6 @@
 var clock = document.getElementById('clock');
 
-clock.addEventListener('click', function(min) {
-    // console.log(event.target);
-    var timeLeft = document.querySelectorAll('span')[3];
-    // console.log(timeLeft);
-    var date = new Date();
-    date.setMinutes(min, 00);
-    var sec = date.getSeconds();
-    var run = setInterval(function() {
-        if (sec !== 0) {
-            sec--;
-        } else {
-            sec = 59;
-            min--;
-        }
-        if (sec < 10) {
-            sec = '0' + sec;
-        }
-        timeLeft.innerHTML = min + ':' +sec;
-        if (min === 0 & sec === '00') {
-            clearInterval(run);
-        }
-    }, 1000);
 
-}, false);
 
 function changeTimeLength(input, index) {
     // console.log(input);
@@ -80,4 +57,35 @@ window.onload = function() {
     var inputs = document.querySelectorAll('input');
     // console.log(inputs);
     inputs.forEach(changeTimeLength);
+    var overlay = document.getElementById('overlay');
+    var top = 296;
+    var time = parseInt(document.querySelectorAll('span')[1].innerText);
+    time = (300 / (time * 60));
+    clock.addEventListener('click', function() {
+        // console.log(event.target);
+        var timeLeft = document.querySelectorAll('span')[3];
+        // console.log(timeLeft);
+        var date = new Date();
+        var min = parseInt(timeLeft.innerText.substring(0,2));
+        // console.log(min);
+        date.setMinutes(min, 00);
+        var sec = date.getSeconds();
+        var run = setInterval(function() {
+            if (sec != 0) {
+                sec--;
+            } else {
+                sec = 59;
+                min--;
+            }
+            if (sec < 10) {
+                sec = '0' + sec;
+            }
+            timeLeft.innerHTML = min + ':' +sec;
+            top = top - time; 
+            overlay.style.top = top + 'px';
+            if (min === 0 & sec === '00' || top == -4) {
+                clearInterval(run);
+            }
+        }, 1000);
+    }, false);
 };
