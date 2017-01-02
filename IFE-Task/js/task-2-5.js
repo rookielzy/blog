@@ -41,14 +41,17 @@ var aqiSourceData = {
   "厦门": randomBuildData(100),
   "沈阳": randomBuildData(500)
 };
-
+// console.log(aqiSourceData['北京']);
+// for (var i in aqiSourceData['北京']) {
+//   console.log(i);
+// }
 // 用于渲染图表的数据
 var chartData = {};
 
 var graTime = document.querySelector('input[checked]');
-console.log(graTime)
+// console.log(graTime)
 var citySelect = document.getElementById('city-select').value;
-console.log(citySelect);
+// console.log(citySelect);
 
 var bgColor = ['red', 'green', 'blue', 'black'];
 
@@ -64,22 +67,22 @@ var pageState = {
 // column: how many column should be rendered
 // metaData: is a Object, to send data
 // bgColor: column background-color
-function renderChart(column, metaData, bgColor) {
+function renderChart(column, metaData) {
   var divCol = ""; 
   for (var i = 0; i < column; i++) {
-    var data = metaData[i];
+    var data = chartData[metaData[i]];
     divCol += '<div style="width:5px;display:inline-block;height:' + data + ';background-color:' + bgColor[parseInt(Math.random() * 4)] + '"></div>';
   }
   var aqiChartWrap = document.getElementsByClassName('aqi-chart-wrap')[0];
   aqiChartWrap.innerHTML = divCol;
   
 }
-// renderChart(10, [30,40,50,60,70,80,90,10,20,60], bgColor); test done
+// renderChart(10, [30,40,50,60,70,80,90,10,20,60], bgColor); 
 
 /**
  * 日、周、月的radio事件点击时的处理函数
  */
-function graTimeChange() {
+function graTimeChange(city) {
   // 确定是否选项发生了变化 
   if (graTime !== pageState.nowGraTime) {
     pageState.nowGraTime = graTime;
@@ -88,20 +91,21 @@ function graTimeChange() {
   // day: 1st to end of month console.log(parseInt(x.substring(8)));
   // week: every 7 days
   // month: every months
-  if (pageState.nowGraTime === 'day') {
+  // console.log(pageState.nowGraTime);
+  if (pageState.nowGraTime.value === 'day') {
     // need city data
     // need a count to stop loop
-    // odd < 8 31days, even < 8 31days, Feb 
-    for (var i in aqiSourceData[city]) {
-      if (parseInt(x.substring(8)) === 31 && x.substring(5,8) ) {
-
-      }
-    }
-
+    // odd < 8 31days, even < 8 31days, Feb
+    chartData = aqiSourceData[city];
+    var keys = Object.keys(chartData);
+    // console.log(keys);
+    renderChart(keys.length, keys);
+  } else if (pageState.nowGraTime.value === 'week') {
+    
   }
   // 调用图表渲染函数
 }
-
+graTimeChange('北京');
 /**
  * select发生变化时的处理函数
  */
