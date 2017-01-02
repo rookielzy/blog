@@ -59,10 +59,15 @@
 #overlay {
     width: 350px;
     height: 350px;
-    border: 1px solid black;
+    border: 1px solid #96eb6b;
     position: absolute;
     top: 296px;
     left: -25px;
-    background-color: black;
+    background-color: #96eb6b;
     z-index: -1;    
+}
+
+.isPause {
+    background-color: grey;
+    opacity: 0.5;
 }

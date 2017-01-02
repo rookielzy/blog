@@ -53,16 +53,12 @@ function changeTimeLength(input, index) {
     }
 }
 
-window.onload = function() {
-    var inputs = document.querySelectorAll('input');
-    // console.log(inputs);
-    inputs.forEach(changeTimeLength);
-    var overlay = document.getElementById('overlay');
-    var top = 296;
-    var time = parseInt(document.querySelectorAll('span')[1].innerText);
-    time = (300 / (time * 60));
-    clock.addEventListener('click', function() {
+function ClockRun() {
         // console.log(event.target);
+        var overlay = document.getElementById('overlay');
+        var top = 296;
+        var time = parseInt(document.querySelectorAll('span')[1].innerText);
+        time = (300 / (time * 60));
         var timeLeft = document.querySelectorAll('span')[3];
         // console.log(timeLeft);
         var date = new Date();
@@ -80,12 +76,19 @@ window.onload = function() {
             if (sec < 10) {
                 sec = '0' + sec;
             }
-            timeLeft.innerHTML = min + ':' +sec;
+            timeLeft.innerHTML = min + ':' + sec;
             top = top - time; 
             overlay.style.top = top + 'px';
             if (min === 0 & sec === '00' || top == -4) {
                 clearInterval(run);
             }
         }, 1000);
-    }, false);
+    }
+
+window.onload = function() {
+    var inputs = document.querySelectorAll('input');
+    // console.log(inputs);
+    inputs.forEach(changeTimeLength);
+    // console.log(clock.classList);
+    clock.addEventListener('click', ClockRun, false);
 };
