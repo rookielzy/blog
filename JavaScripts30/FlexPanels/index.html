@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flex Panels</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+            }
+            .panels {
+                display: flex;
+                min-height: 100vh;
+                background-color: #ccc;
+                font-family: Arial, Helvetica, sans-serif;
+                overflow: hidden;
+                color: yellowgreen;
+            }
+            .panel {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                flex: 1;
+                transition: 
+                    font-size 0.5s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+                    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+                background-size: cover;
+                background-position: center;
+            }
+            .panel h1 {
+                font-weight: 400;
+            }
+            .panel > * {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
+                transition: transform 0.5s;
+            }
+            .panel > *:first-child {
+                transform: translateY(-100%);
+            }
+            .panel > *:last-child {
+                transform: translateY(100%);
+            }
+            .panel1 {
+                background-image: url('img/nas.jpg');
+
+            }
+            .panel2 {
+                background-image: url('../UpdateCSS/eminem.jpg');
+            }
+            .panel3 {
+                background-image: url('img/kendrick.jpg');
+
+            }
+            .panel4 {
+                background-image: url('img/snoop.jpg');
+            }
+            .panel5 {
+                background-image: url('img/dre.jpg');
+            }
+            .open {
+                font-size: 40px;
+                flex: 5;
+            }
+            .panel.open-active >*:first-child {
+                transform: translateY(0);
+            }
+            .panel.open-active > *:last-child {
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="panels">
+            <div class="panel panel1">
+                <h1>Yo</h1>
+                <h1>Nas</h1>
+                <h1>Master</h1>
+            </div>
+            <div class="panel panel2">
+                <h1>Real</h1>
+                <h1>Slim</h1>
+                <h1>Shady</h1>
+            </div>
+            <div class="panel panel3">
+                <h1>King</h1>
+                <h1>Kendrick</h1>
+                <h1>Lamar</h1>
+            </div>
+            <div class="panel panel4">
+                <h1>Snoop</h1>
+                <h1>Doggy</h1>
+                <h1>Dogg</h1>
+            </div>
+            <div class="panel panel5">
+                <h1>Dr</h1>
+                <h1>Dre</h1>
+                <h1>N.W.A</h1>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
