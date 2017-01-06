@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Animate Toolbar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .toolbar {
+                width: 100%;
+                max-width: 670px;
+                min-width: 550px;
+                margin: 70px auto;
+                color: lightgreen;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .toolbar h1 {
+                font-size: 40px;
+                letter-spacing: 10px;
+                font-weight: 400;
+            }
+            .button {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: lightgreen;
+                text-align: center;
+                color: white;
+                font-size: 3.5em;
+                position: relative;
+                left: 50%;
+                margin-left: -80px;
+                z-index: 1;
+                cursor: pointer;
+            }
+            .button, .icons {
+                transition: all 1s cubic-bezier(.87,-.41,.19,1.44);
+            }
+            .button.active {
+                transform: rotate(45deg);
+                left: 60px;
+            }
+            .button:after {
+                content: '+';
+            }
+            .icons {
+                width: 0%;
+                overflow: hidden;
+                height: 60px;
+                background-color: #fff;
+                box-shadow: 1px 1px 1px #dcdcdc;
+                margin: -65px 0 0 44%;
+                border-radius: 2em;
+            }
+            .icons.open {
+                width: 80%;
+                margin: -60px 0 0 5%;
+                overflow: hidden;
+            }
+            .icons li {
+                list-style: none;                
+                display: inline-block;
+                width: 10%;
+            }
+            .icons.open li {
+                width:16%;
+                display: inline-block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="toolbar">
+            <h1>ANIMATED TOOLBAR</h1>
+            <div class="button"></div>
+            <ul class="icons">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
