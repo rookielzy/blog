@@ -25,6 +25,9 @@ console.warn('you are wrong', 1===2);
 console.time();
 var i = 1;
 var j = i + 2;
+for (i; i < 10; i++) {
+    j = i;
+}
 console.timeEnd();
 
 
