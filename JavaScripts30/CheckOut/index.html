@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CheckOut UI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <main class="with-hover">
+        <header>
+            <div>
+                <div></div>
+                <h1>Lemon Tea</h1>
+                <hr/>
+                <form>
+                    <ul>
+                        <li>
+                            <fieldset class="type">
+                                <div>
+                                    <input type="number" placeholder="0" value="2" />
+                                    <label>&nbsp;boxes</label>
+                                </div>
+                            </fieldset>
+                            <fieldset class="cost">
+                                <div>
+                                    <label>$</label>
+                                    <input type="number" placeholder="0.00" value="6.00" disabled/>
+                                </div>
+                            </fieldset>
+                        </li>
+                        <li>
+                            <div class="type">
+                                <h2>Shipping</h2>
+                            </div>
+                            <fieldset class="cost">
+                                <div>
+                                    <label>$</label>
+                                    <input type="number" placeholder="0.00" value="1.00" disabled/>
+                                </div>
+                            </fieldset>
+                        </li>
+                    </ul>
+                    <hr/>
+                    <ul class="total">
+                        <li>
+                            <div class="type">
+                                <h3>Total</h3>
+                            </div>
+                            <fieldset class="cost">
+                                <div>
+                                    <label>$</label>
+                                    <input type="number" placeholder="0.00" value="7.00" disabled/>
+                                </div>
+                            </fieldset>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </header>
+        <section class="shipping">
+            <form>
+                <ul>
+                    <li>
+                        <fieldset>
+                            <div>
+                                <label for="name">Name</label>
+                                <input id="name" type="text" placeholder="Marcia Polo" size="16" />
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <div>
+                                <label for="address">Address</label>
+                                <input id="address" type="text" placeholder="123 Main Street" size="20" />
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <div>
+                                <label for="city">City</label>
+                                <input id="city" type="text" placeholder="Anytown" size="15" />
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <div>
+                                <label for="state">State</label>
+                                <input id="state" type="text" placeholder="AB" size="3" />
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <div>
+                                <label for="code">Postal Code</label>
+                                <input id="code" type="tel" placeholder="12345" size="7" />
+                            </div>
+                        </fieldset>
+                    </li>
+                </ul>
+            </form>
+        </section>
+        <section class="payment">
+            <form>
+                <ul>
+                    <li>
+                        <fieldset>
+                            <div>
+                                <div class="checkbox">
+                                    <input id="same" type="checkbox" />
+                                    <div>
+                                        <svg viewBox="0 0 32 32">
+                                            <polyline points="7.24 17.0305882 12.3929412 22.1835294 24.76 9.81647059" fill="none" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <label for="same">&nbsp;&nbsp;Same as Shipping</label>
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <div>
+                                <label for="card-name">Cardholder Name</label>
+                                <input id="card-name" type="text" placeholder="Marcia Polo" size="16" />
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <div>
+                                <label for="card-code">Postal Code</label>
+                                <input id="card-code" type="tel" placeholder="00000" size="7" />
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <div>
+                                <label for="card">Card Number</label>
+                                <ul>
+                                    <li><input id="card" type="tel" placeholder="0000" size="5" /></li>
+                                    <li>&nbsp;-&nbsp;</li>
+                                    <li><input type="tel" placeholder="0000" size="5" /></li>
+                                    <li>&nbsp;-&nbsp;</li>
+                                    <li><input type="tel" placeholder="0000" size="5" /></li>
+                                    <li>&nbsp;-&nbsp;</li>
+                                    <li><input type="tel" placeholder="0000" size="5" /></li>
+                                </ul>
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <div>
+                                <label for="date">Expiration Date</label>
+                                <ul>
+                                    <li><input id="date" type="tel" placeholder="00" size="3" /></li>
+                                    <li>&nbsp;/&nbsp;</li>
+                                    <li><input type="tel" placeholder="0000" size="5" /></li>
+                                </ul>
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <div>
+                                <label for="cvc">CVC</label>
+                                <input id="cvc" type="tel" placeholder="000" size="4" />
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <input type="submit" value="Purchase" />
+                        <a>or back to shop</a>
+                    </li>
+                </ul>
+            </form>
+        </section>
+    </main>
+    <script src="..\..\javascripts\jquery-3.1.1.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
