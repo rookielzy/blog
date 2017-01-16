@@ -1,0 +1,15 @@
+.match {
+    color: red;
+    font-size: 20px;
+}
+
+li {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    list-style: none;
+    display: inline-block;
+    background-color: skyblue;
+    margin: 10px;
+}
