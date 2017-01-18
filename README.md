@@ -10,3 +10,4 @@ All my life I have to fight
 
 
 2017年1月15日。今天就练习了一下React Native。 惭愧惭愧
+2017年1月18日。Stick To The Plan
