@@ -8,7 +8,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.5s ease;        
+    /*transition: all 0.5s ease;        */
 }
 
 main {
@@ -36,6 +36,8 @@ main h1 {
     height: 70px;
     margin-top: -100px;
     margin-left: -20px;
+    text-align: center;
+    /*overflow: hidden;*/
 }
 
 #signupBtn {
@@ -57,53 +59,84 @@ main h1 {
     transition: all 0.5s ease;
 }
 
+.signup .show {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
 .signup.active {
-    max-width: 400px;
-    min-height: 380px;
+    width: 400px;
+    height: 380px;
     margin-top: -200px;
     margin-left: -225px;
     text-align: center;
     transition: all 0.5s ease;
-    transition-delay: 1s;
+    overflow: hidden;
+    /*transition-delay: 1s;*/
+}
+.signup.active #signupBtn {
+    /*transform: translateY(20px);*/
+    border-radius: 5px;
+    width: 90%;
+    transition: all 0.5s ease;
+    transition-delay: 0.5s;
+    text-align: center;
+    line-height: 50px;
+}
+
+.signup.active .show {
+    width: 100%;
+    height: 300px;
 }
 
 .signup.active .show > h1 {
     color: #f1778c;
     font-size: 30px;
-    width: 80%;
+    width: 90%;
     height: 60px;
-    margin: 0 auto;
     border-bottom: 1px solid #ccc;
     transform: translateX(20px);
-    transition-delay: 2s;
+    transition: transform 0.5s ease;
+    transition-delay: 0.7s;    
 }
 
-.signup.active #signupBtn {
-    border-radius: 5px;
-    width: 75%;
-    transition: all 0.5s ease;
+.signup.active #signupBtn > h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    text-shadow: none;
 }
 
 .signup.active .signupMsg {
     width: 80%;
     margin: 0 auto;
-    transition-delay: 3s;    
+    transition: all 1s ease;
+    transition-delay: 0.85s;    
 }
-
+.signup .signupMsg input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
 .signup.active .signupMsg input {
     display: inline-block;
-    width: 90%;
+    width: 100%;
     height: 50px;
+    opacity: 1;    
     border-radius: 5px;
     margin: 15px 0;
     border: 1px solid #ccc;
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
     text-indent: 5px;
     outline: none !important;
-    transition-delay: 3.5s;        
+    transition: width 2s ease, height 2s ease, opacity 2s ease;    
+    transition-delay: 1s;        
 }
 
 .signup.active .signupMsg input:focus {
     border-color: #f1778c;
+    transition: all 0s ease;    
+    transition-delay: 0;    
     box-shadow: inset 0 1px 1px #f35464, 0 0 8px #f35464;
 }
