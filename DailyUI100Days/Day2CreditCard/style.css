@@ -25,16 +25,19 @@ html, body {
 .card1 {
     transform: translateX(-135px) rotateY(30deg);
     background: red;
+    z-index: 1;    
 }
 
 .card2 {
     background: blue;
     transform: translateX(-135px) rotateY(60deg);
+    z-index: 2;    
 }
 
 .card3 {
     background: green;
     transform: translateX(-135px) rotateY(80deg); 
+    z-index: 3;
 }
 
 .card4 {
