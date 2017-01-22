@@ -19,41 +19,45 @@ html, body {
     min-height: 200px; 
     border: 1px solid #ccc;
     position: absolute;
+    transition: transform 0.5s ease;
 }
 
-.cards-flow div:nth-child(1) {
+.card1 {
     transform: translateX(-135px) rotateY(30deg);
     background: red;
 }
 
-.cards-flow div:nth-child(2) {
+.card2 {
     background: blue;
     transform: translateX(-135px) rotateY(60deg);
 }
 
-.cards-flow div:nth-child(3) {
+.card3 {
     background: green;
     transform: translateX(-135px) rotateY(80deg); 
 }
 
-.cards-flow div:nth-child(4) {
+.card4 {
     background: yellow;  
-    z-index: 1;
+    z-index: 99;
 }
 
-.cards-flow div:nth-child(7) {
+.card5 {
     transform: translateX(135px) rotateY(-80deg);   
     background: pink;        
+    z-index: 3;
 }
 
-.cards-flow div:nth-child(6) {
+.card6 {
     transform: translateX(135px) rotateY(-60deg);  
     background: lightseagreen;     
+    z-index: 2;    
 }
 
-.cards-flow div:nth-child(5) {
+.card7 {
     transform: translateX(135px) rotateY(-30deg);  ; 
     background: rebeccapurple;
+    z-index: 1;    
 }
 
 .cards-info {
