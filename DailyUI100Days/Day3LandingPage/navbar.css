@@ -1,0 +1,7 @@
+.navbar span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 6px auto;
+    background-color: black;
+}
