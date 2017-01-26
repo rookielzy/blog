@@ -14,3 +14,5 @@ All my life I have to fight
 2017年1月18日。Stick To The Plan
 
 2017年2月25日。My eyes were ill, can not conntinue to learn.
+
+2017年2月26日。My eyes are getting better...
