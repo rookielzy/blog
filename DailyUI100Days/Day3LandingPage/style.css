@@ -47,3 +47,17 @@ h1 {
     height: 600px;
     align-self: center;
 }
+
+
+main > h1 {
+    font-size:  80px;
+    letter-spacing: 20px;
+    word-spacing: 100px;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -350px;
+    color: rgba(96, 125, 139, 0.93);
+}
