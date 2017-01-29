@@ -6,13 +6,14 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .calculator {
     width: 400px;
     height: 600px;
     box-shadow: 5px 5px 10px black;
-    border-radius: 10px;
+    border-radius: 20px;
     text-align: center;
     background-color: #dfd8d0;;
 }
@@ -37,4 +38,30 @@ html, body {
     height: 70px;
     font-size: 60px;
     line-height: 70px;
+}
+
+.btns {
+    width: 380px;    
+    display: flex;
+    margin: 0 auto;
+    flex-flow: column;
+}
+
+/*.btns div {
+    flex: 1;
+    border: 1px solid black;
+}*/
+
+.test {
+    flex: 1;
+    display: flex;
+}
+
+.test div {
+    flex: 1;
+    border: 1px solid black;
+}
+
+.test div:nth-child(2) {
+    flex: 2;
 }
