@@ -8,7 +8,9 @@ html, body {
     align-items: center;
     overflow: hidden;
 }
-
+*, *:before, *:after {
+    box-sizing: border-box;
+}
 .calculator {
     width: 400px;
     height: 600px;
@@ -45,23 +47,71 @@ html, body {
     display: flex;
     margin: 0 auto;
     flex-flow: column;
+    color: white;
+    line-height: 65px;
+    font-size: 30px;
 }
 
-/*.btns div {
-    flex: 1;
-    border: 1px solid black;
-}*/
-
-.test {
+.first-part {
     flex: 1;
     display: flex;
 }
 
-.test div {
+.first-part div {
     flex: 1;
     border: 1px solid black;
+    margin: 10px;
+    height: 65px;
+    background-color: #3a3a3a;
+    box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.test div:nth-child(2) {
-    flex: 2;
+.second-part {
+    flex: 1;
+    display: flex;
+}
+
+.second-part div {
+    border: 1px solid black; 
+}
+
+#one {
+    flex: 3.7;
+    border: none;
+}
+
+#one > div {
+    display: flex;
+    border: none;
+    height: 85px;
+}
+
+#one > div > div {
+    width: 75px;
+    margin: 10px;
+    background-color: #3a3a3a;
+    box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
+    border-radius: 5px;
+    cursor: pointer;    
+}
+
+#zero {
+    width: 170px !important;
+}
+
+#equal {
+    width: 75px;
+    margin: 10px;
+    background-color: #3a3a3a;
+    box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
+    border-radius: 5px;  
+    cursor: pointer;      
+}
+
+.pressdown {
+    box-shadow: none !important;
+    transform: scale(0.9);
+    transition: all 0.1s linear;
 }
