@@ -9,14 +9,3 @@ All my life I have to fight
 5. to ve continue...
 
 
-2017年1月15日。今天就练习了一下React Native。 惭愧惭愧
-
-2017年1月18日。Stick To The Plan
-
-2017年1月25日。My eyes were ill, can not conntinue to learn.
-
-2017年1月26日。My eyes are getting better...
-
-2017年1月27日。Happy New Year!
-
-2017年2月1日。Fuch THE DEAD GAME!
