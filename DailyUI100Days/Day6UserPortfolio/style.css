@@ -1,0 +1,124 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;    
+}
+
+body {
+    padding: 12px;
+    background: linear-gradient(315deg, #f5515f 0%, #05abe0 100%);
+    color: #343434;
+    text-rendering: optimizeLegibility;
+}
+
+.portfolio {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(115, 7, 19, 0.2);
+    background-color: white;    
+}
+
+.avatar {
+    background: url('../../images/self-pic.jpg') no-repeat top center/cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+}
+
+.avatar, user-info {
+    width: 50%;
+    height: 100%;
+}
+
+.user-info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 40px;
+}
+
+.user-info h1 {
+    padding: 12px 12px 0;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.user-info h2 {
+    display: block;
+    margin-top: 4px;
+    border-radius: 2px;
+    padding: 6px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #f5825f 0%, #f5005f 100%);
+    margin: 10px;
+}
+
+.user-info ul {
+    margin: 20px;
+    padding: 15px;
+}
+
+.user-info ul li {
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.user-info ul li img {
+    width: 28px;
+    height: 28px;
+}
+
+.user-info ul li i {
+    color: #343434;
+}
+
+.user-info .project {
+    background: -webkit-linear-gradient(top left, #f8dbd5 0%, #f7a4cc 100%);
+    background: -o-linear-gradient(top left, #f8dbd5 0%, #f7a4cc 100%);
+    background: linear-gradient(to bottom right, #f8dbd5 0%, #f7a4cc 100%);
+}
+
+.user-info .github {
+    background: -webkit-linear-gradient(top left, #41adc4 0%, #4183c4 100%);
+    background: -o-linear-gradient(top left, #41adc4 0%, #4183c4 100%);
+    background: linear-gradient(to bottom right, #41adc4 0%, #4183c4 100%);
+}
+
+@media only screen and (min-height: 600px) and (min-width: 470px) {
+    .portfolio {
+        max-height: 400px;
+    }
+}
+
+@media only screen and (min-width: 470px) {
+    .portfolio {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 470px) {
+    .avatar {
+        clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+    }
+}
