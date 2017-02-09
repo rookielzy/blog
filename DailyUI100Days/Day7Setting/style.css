@@ -44,8 +44,6 @@ input, textarea, button {
     border-radius: 2px;
     background-color: white;
     overflow: hidden;
-    display: flex;
-    flex-flow: row wrap;
 }
 
 .setting nav {
@@ -84,4 +82,87 @@ input, textarea, button {
 
 .setting nav div:nth-child(4) {
     border-left: 1px solid #f3e3e2;   
+}
+
+
+.content {
+    display: flex;
+    flex-flow: column;
+}
+
+.content .avatar {
+    padding: 10px 20px;
+}
+
+.content .show-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.content .show-avatar div {
+    display: inline-block;
+}
+
+.detail {
+    display: flex;
+    padding: 10px 20px;
+    flex-flow: column;
+}
+
+.detail div {
+    position: relative;
+    height: 60px;
+}
+
+.detail div hr {
+    margin: 0;
+}
+
+.detail > div:nth-child(1), .detail > div:nth-child(2) {
+    display: flex;
+}
+
+.detail div div {
+    flex: 1;
+
+}
+
+.detail div div:nth-child(2n+1) {
+    padding-right: 10px;
+}
+
+.detail label {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    font-size: 20px;
+    transition: top 0.2s ease-out, font-size 0.2s ease-out;    
+    color: #d19a95;
+}
+
+.detail input {
+    display: block;
+    height: 40px;
+    font-size: 16px;
+    position: relative;
+    top: 9px;
+    color: white;    
+}
+
+.detail input:focus + label{
+    top: 0 !important;
+    font-size: 12px !important;
+    transition: all 0.2s ease-out !important;
+}
+.detail input:last-child {
+    transition: background-color 100ms ease-out;
+    background-color: #866972;
+    cursor: pointer;
+}
+.detail input:last-child:hover {
+    transition: background-color 100ms ease-out;
+    background-color: #cd908b;
 }
