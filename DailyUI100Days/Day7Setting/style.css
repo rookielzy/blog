@@ -44,57 +44,71 @@ input, textarea, button {
     border-radius: 2px;
     background-color: white;
     overflow: hidden;
+    position: relative;
 }
 
-.setting nav {
-    width: 100%;
+.setting input[type='radio'] {
+    width: 150px;
     height: 50px;
-    border-bottom: 2px solid #f3e3e2;
-    display: flex;
-    flex-flow: row;
-}
-
-.setting nav div {
-    flex: 1;
-    text-align: center;
-    line-height: 50px;
+    border-left: 1px solid #f3e3e2;
+    border-right: 1px solid #f3e3e2;
+    border-bottom: 1px solid #f3e3e2;
+    margin: 0;
     cursor: pointer;
 }
 
-.setting nav div:hover {
+.setting input[type='radio']:hover, .setting input[type='radio'] + span:hover {
     background-color: #f3e3e2;
     transition: background-color 100ms ease-out;
 }
-
-.setting nav div:nth-child(1) {
-    border-right: 1px solid #f3e3e2;
+.setting input[type='radio'] + span {
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 50px;
+    top: 0;
+    text-align: center;
+    line-height: 50px;
+    background: transparent;
 }
 
-.setting nav div:nth-child(2) {
-    border-left: 1px solid #f3e3e2;
-    border-right: 1px solid #f3e3e2;    
+.setting input[type='radio'] + span:nth-child(2) {
+
 }
 
-.setting nav div:nth-child(3) {
-    border-left: 1px solid #f3e3e2;
-    border-right: 1px solid #f3e3e2;   
+.setting input[type='radio'] + span:nth-child(4) {
+    left: 150px;
 }
 
-.setting nav div:nth-child(4) {
-    border-left: 1px solid #f3e3e2;   
+.setting input[type='radio'] + span:nth-child(6) {
+    left: 300px
 }
 
+.setting input[type='radio'] + span:nth-child(8) {
+    left: 450px;
+}
 
-.content {
+.profile {
     display: flex;
     flex-flow: column;
+    position: relative;
+    top: 0;
+    opacity: 1;
+    transition: top 0.4s ease-out, opacity 0.4s ease-out;
 }
 
-.content .avatar {
+/*.setting nav div:nth-child(1):hover #test {
+    top: 100px;
+    opacity: 0;
+    transition: top 0.4s ease-out, opacity 0.4s ease-out;    
+}*/
+
+
+.profile .avatar {
     padding: 10px 20px;
 }
 
-.content .show-avatar img {
+.profile .show-avatar img {
     width: 100px;
     height: 100px;
     border-radius: 2px;
@@ -102,7 +116,7 @@ input, textarea, button {
     vertical-align: bottom;
 }
 
-.content .show-avatar div {
+.profile .show-avatar div {
     display: inline-block;
 }
 

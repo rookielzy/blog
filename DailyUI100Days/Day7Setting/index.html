@@ -1,72 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Setting</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet">
-    </head>
-    <body>
-        <mian class="setting">
-            <!--top navbar start-->
-            <nav>
-                <div>
-                    <input type="radio" name="setting" value="Profile"><span>Profile</span>
+
+<head>
+    <title>Setting</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <mian class="setting">
+        <!--top navbar start-->
+        <input type="radio" name="setting" value="Profile"><span>Profile</span><input type="radio" name="setting" value="Account"><span>Account</span><input type="radio" name="setting" value="Privacy"><span>Privacy</span><input type="radio" name="setting" value="Advanced"><span>Advanced</span>
+        <!--top navbar end-->
+        <section class="profile" id="test">
+            <section class="avatar">
+                <div class="show-avatar">
+                    <img src="" alt="">
+                    <div>
+                        <h1>User Avatar</h1>
+                        <input type="file" name="avatar" id="selectFile">
+                    </div>
                 </div>
-                <div>
-                    <input type="radio" name="setting" value="Account"><span>Account</span>
-                </div>
-                <div>
-                    <input type="radio" name="setting" value="Privacy"><span>Privacy</span>
-                </div>   
-                <div>
-                    <input type="radio" name="setting" value="Advanced"><span>Advanced</span>
-                </div>    
-            </nav>
-            <!--top navbar end-->
-            <section class="content">
-                <section class="avatar">
-                    <div class="show-avatar">
-                        <img src="" alt="">
-                        <div>
-                            <h1>User Avatar</h1>
-                            <input type="file" name="avatar" id="selectFile">   
-                        </div>
-                    </div>
-                </section>
-                <section class="detail">
-                    <div>
-                        <div>
-                            <input type="text" name="username" value="rookielzy" required>
-                            <label for="username">Name</label>
-                            <hr/>
-                        </div>
-                        <div>
-                            <input type="text" name="location" required>                            
-                            <label for="location">Location</label>                            
-                            <hr/>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <input type="text" name="title" required>
-                            <label for="title">Title</label>
-                            <hr/>                            
-                        </div>
-                        <div>
-                            <input type="text" name="website" required>  
-                            <label for="website">Website</label>
-                            <hr/>                            
-                        </div>
-                    </div>
-                    <div>
-                        <input type="text" name="about" required> 
-                        <label for="about">About</label>
-                        <hr/>                        
-                    </div>
-                    <input type="submit" value="Save">
-                </section>
             </section>
-        </mian>
-    </body>
+            <section class="detail">
+                <div>
+                    <div>
+                        <input type="text" name="username" value="rookielzy" required>
+                        <label for="username">Name</label>
+                        <hr/>
+                    </div>
+                    <div>
+                        <input type="text" name="location" required>
+                        <label for="location">Location</label>
+                        <hr/>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="text" name="title" required>
+                        <label for="title">Title</label>
+                        <hr/>
+                    </div>
+                    <div>
+                        <input type="text" name="website" required>
+                        <label for="website">Website</label>
+                        <hr/>
+                    </div>
+                </div>
+                <div>
+                    <input type="text" name="about" required>
+                    <label for="about">About</label>
+                    <hr/>
+                </div>
+                <input type="submit" value="Save">
+            </section>
+        </section>
+    </mian>
+</body>
+
 </html>
