@@ -9,6 +9,7 @@ html, body {
 
 * {
     transform-style: preserve-3d;
+    box-sizing: border-box;    
 }
 
 *:focus {
@@ -48,28 +49,37 @@ input, textarea, button {
 }
 
 .setting input[type='radio'] {
-    width: 150px;
+    position: relative;
+    width: 25%;
     height: 50px;
     border-left: 1px solid #f3e3e2;
     border-right: 1px solid #f3e3e2;
     border-bottom: 1px solid #f3e3e2;
     margin: 0;
+    z-index: 6;
     cursor: pointer;
 }
 
-.setting input[type='radio']:hover, .setting input[type='radio'] + span:hover {
+/*.setting input[type='radio']:hover, .setting input[type='radio'] + span:hover {
     background-color: #f3e3e2;
     transition: background-color 100ms ease-out;
+}*/
+
+.setting input[type='radio']:checked + span {
+    background: #866972;
+    color: white;
 }
+
 .setting input[type='radio'] + span {
     position: absolute;
     display: block;
-    width: 150px;
+    width: 25%;
     height: 50px;
     top: 0;
     text-align: center;
     line-height: 50px;
     background: transparent;
+    z-index: 5;
 }
 
 .setting input[type='radio'] + span:nth-child(2) {
@@ -77,31 +87,33 @@ input, textarea, button {
 }
 
 .setting input[type='radio'] + span:nth-child(4) {
-    left: 150px;
+    left: 146px;
 }
 
 .setting input[type='radio'] + span:nth-child(6) {
-    left: 300px
+    left: 292px
 }
 
 .setting input[type='radio'] + span:nth-child(8) {
-    left: 450px;
+    left: 437px;
 }
 
 .profile {
     display: flex;
     flex-flow: column;
     position: relative;
-    top: 0;
-    opacity: 1;
-    transition: top 0.4s ease-out, opacity 0.4s ease-out;
-}
-
-/*.setting nav div:nth-child(1):hover #test {
     top: 100px;
     opacity: 0;
+    z-index: -1;
+    transition: top 0.4s ease-out, opacity 0.4s ease-out, z-index 0.4s ease-out;
+}
+
+.setting input[type='radio']:nth-child(1):checked ~ .profile {
+    top: 0px;
+    opacity: 1;
+    z-index: 10;
     transition: top 0.4s ease-out, opacity 0.4s ease-out;    
-}*/
+}
 
 
 .profile .avatar {
