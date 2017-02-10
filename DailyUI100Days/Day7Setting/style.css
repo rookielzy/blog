@@ -87,32 +87,34 @@ input, textarea, button {
 }
 
 .setting input[type='radio'] + span:nth-child(4) {
-    left: 146px;
+    left: 150px;
 }
 
 .setting input[type='radio'] + span:nth-child(6) {
-    left: 292px
+    left: 300px
 }
 
 .setting input[type='radio'] + span:nth-child(8) {
-    left: 437px;
+    left: 450px;
 }
 
 .profile {
     display: flex;
     flex-flow: column;
     position: relative;
-    top: 100px;
+    transform: translateY(100px);
+    /*top: 100px;*/
     opacity: 0;
     z-index: -1;
-    transition: top 0.4s ease-out, opacity 0.4s ease-out, z-index 0.4s ease-out;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out, z-index 0.4s ease-out;
 }
 
 .setting input[type='radio']:nth-child(1):checked ~ .profile {
-    top: 0px;
+    transform: translateY(0);
+    /*top: 0px;*/
     opacity: 1;
     z-index: 10;
-    transition: top 0.4s ease-out, opacity 0.4s ease-out;    
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out, z-index 0.4s ease-out;  
 }
 
 
@@ -171,6 +173,7 @@ input, textarea, button {
 
 .detail input {
     display: block;
+    width: 100%;
     height: 40px;
     font-size: 16px;
     position: relative;
@@ -192,4 +195,36 @@ input, textarea, button {
 .detail input:last-child:hover {
     transition: background-color 100ms ease-out;
     background-color: #cd908b;
+}
+
+
+.account {
+    transform: translateY(-250px);
+    opacity: 0;
+    z-index: -1;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out, z-index 0.4s ease-out;          
+}
+
+.account .detail div:nth-child(3), .account .detail div:nth-child(4) {
+    display: flex;
+}
+
+.account .detail div:nth-child(3) div, .account .detail div:nth-child(4) div {
+    flex: 1;
+}
+
+.account .detail div:nth-child(3) div input[type='button'], .account .detail div:nth-child(4) div input[type='button'] {
+    border-radius: 30px;
+    background-color: deepskyblue;
+}
+
+.account .detail div:nth-child(3) div input[type='button']:focus, .account .detail div:nth-child(4) div input[type='button']:focus {
+    background-color: lightsteelblue;
+}
+
+.setting input[type='radio']:nth-child(3):checked ~ .account {
+    transform: translateY(-350px);
+    opacity: 1;
+    z-index: 10;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out, z-index 0.4s ease-out;      
 }
