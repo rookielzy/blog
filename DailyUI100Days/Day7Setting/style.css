@@ -46,6 +46,16 @@ input, textarea, button {
     background-color: white;
     overflow: hidden;
     position: relative;
+    animation: start 1.5s ease-in-out;
+}
+
+@keyframes start {
+    0% {
+        transform: rotateY(30deg) rotateX(80deg) translateY(400px);      
+    }
+    100% {
+        transform: rotateY(0deg) rotateX(0deg) translateY(0px);          
+    }
 }
 
 .setting input[type='radio'] {
@@ -87,15 +97,15 @@ input, textarea, button {
 }
 
 .setting input[type='radio'] + span:nth-child(4) {
-    left: 150px;
+    left: 25%;
 }
 
 .setting input[type='radio'] + span:nth-child(6) {
-    left: 300px
+    left: 50%;
 }
 
 .setting input[type='radio'] + span:nth-child(8) {
-    left: 450px;
+    left: 75%;
 }
 
 .profile {
@@ -227,4 +237,24 @@ input, textarea, button {
     opacity: 1;
     z-index: 10;
     transition: transform 0.4s ease-out, opacity 0.4s ease-out, z-index 0.4s ease-out;      
+}
+
+@media only screen and (min-width: 470px) {
+    .setting {
+        width: 470px;
+        height: 450px;
+    }
+
+    .setting input[type='radio'] + span:nth-child(4) {
+    left: 120px;
+    }
+
+    .setting input[type='radio'] + span:nth-child(6) {
+        left: 235px
+    }
+
+    .setting input[type='radio'] + span:nth-child(8) {
+        left: 353px;
+    }
+
 }
