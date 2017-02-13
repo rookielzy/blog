@@ -1,0 +1,40 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    border-radius: 2px;
+    width: 375px;
+    height: 667px;
+    background: url('pryde.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.player .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.8;    
+}
+
+.player header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.player h1 {
+    position: relative;
+}
+
+.player h1:after {
+    content: 'Pryde';
+    font-size: 16px;
+    position: absolute;
+    top: 75%;
+    left: 40%;
+}
