@@ -25,16 +25,25 @@ html, body {
 .player header {
     display: flex;
     justify-content: space-around;
+    border-bottom: 1px solid black;
 }
 
 .player h1 {
     position: relative;
+    font-size: 12px;
+    flex: 1;
+    margin: 0;
+}
+
+.player span {
+    flex: 1;
+    font-size: 40px;
 }
 
 .player h1:after {
     content: 'Pryde';
-    font-size: 16px;
-    position: absolute;
-    top: 75%;
-    left: 40%;
+    font-size: 6px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
