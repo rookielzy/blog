@@ -11,15 +11,23 @@ html, body {
     border-radius: 2px;
     width: 375px;
     height: 667px;
-    background: url('pryde.jpg') center no-repeat;
-    background-size: cover;
+    opacity: 0.8;
+    position: relative;
 }
 
-.player .overlay {
+.player::before {
+    content: '';
     width: 100%;
     height: 100%;
-    background-color: white;
-    opacity: 0.8;    
+    background: url('pryde.jpg') center no-repeat;    
+    background-size: cover;    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(20px);
+    z-index: -1;
 }
 
 .player header {
@@ -46,4 +54,20 @@ html, body {
     display: inline-block;
     width: 100%;
     text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content .spin {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.4;
 }
