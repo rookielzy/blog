@@ -103,6 +103,9 @@ html, body {
     background: url('pryde.jpg') center no-repeat;
     background-size: cover;
     z-index: 99;
+}
+
+.spin-black .musician.playing {
     animation: spin 6s linear infinite;
 }
 
