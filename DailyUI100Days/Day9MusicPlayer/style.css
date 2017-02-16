@@ -182,5 +182,21 @@ html, body {
 }
 
 .controler .part3 {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
 
+.controler .part3 span {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.controler .part3 #play {
+    font-size: 60px;
+    line-height: 0px;
 }
