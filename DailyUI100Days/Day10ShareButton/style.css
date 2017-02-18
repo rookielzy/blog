@@ -40,6 +40,17 @@ a {
     position: absolute;
 }
 
+a::after {
+    content: '';
+    width: 8px;
+    height: 60px;
+    display: inline-block;
+    background: #ccc;
+    position: absolute;
+    top: 65px;
+    left: 27px;
+}
+
 main div {
     width: 100px;
     height: 100px;
