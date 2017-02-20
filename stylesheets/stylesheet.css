@@ -11,9 +11,12 @@ html, body {
 
 body {
     padding: 12px;
-    background: linear-gradient(315deg, #f5515f 0%, #05abe0 100%);
     color: #343434;
     text-rendering: optimizeLegibility;
+}
+
+#canvas {
+  position: absolute;
 }
 
 .portfolio {
