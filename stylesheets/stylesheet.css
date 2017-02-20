@@ -71,7 +71,7 @@ body {
     animation-delay: 1350ms;
 }
 .avatar {
-    background: url('../../images/self-pic.jpg') no-repeat top center/cover;
+    background: url('../images/self-pic.jpg') no-repeat top center/cover;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
 }
 
