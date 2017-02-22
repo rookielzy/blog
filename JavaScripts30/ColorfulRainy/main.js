@@ -41,7 +41,7 @@ if (window.innerWidth < 520) {
             if (sparks.length < OPT.amount) {
                 addSpark();
             }
-        }, 1000 /OPT.amount);
+        }, 1000 / OPT.amount);
 
         window.requestAnimationFrame(draw);
     }
