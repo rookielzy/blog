@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>IFE oncontextmenu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .click {
+            width: 600px;
+            max-height: 200px;
+            max-width: 100%;
+            min-height: 150px;
+            border-radius: 5px;
+            background: #ccc;
+            box-shadow: inset 0 0 5px darkgray;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .pop {
+            position: absolute;
+            opacity: 0;
+            width: 150px;
+            border: 1px solid darkgray;
+            border-radius: 2px;
+            background: white;
+            top: 0;
+            left: 0;
+        }
+
+        .pop ul {
+            list-style: none;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pop li {
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .pop li:hover {
+            background: pink;
+            transition: background 0.2s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="click">
+        <section class="click">
+            Right the this area
+        </section>
+        <section class="pop">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        const rightClick = document.querySelectorAll('.click')[1];
+        const pop = document.querySelector('.pop');
+        // console.log(pop);
+        rightClick.addEventListener('contextmenu', function(event) {
+            // console.log(event);
+            var x = event.clientX,
+                y = event.clientY;
+            // console.log(x, y);
+            if (x + 120 > window.innerWidth) {
+                pop.style.top = y - 147 + 'px';
+                pop.style.left = x - 253 + 'px';
+            } else {
+                pop.style.top = y - 147 + 'px';
+                pop.style.left = x - 103 + 'px';
+            }
+            pop.style.opacity = 1;
+            pop.style.zIndex = 1;
+            event.preventDefault();
+        }, false);
+        rightClick.addEventListener('click', function() {
+            pop.style.opacity = 0;
+            pop.style.zIndex = -1;
+        }, false);
+    </script>
+</body>
+
+</html>
