@@ -58,9 +58,9 @@ var work = {
 var projects = {
     "projects": [
         {
-            "title": 'Weather App',
-            "dates": '2016-12',
-            "description": '',
+            "title": "Weather App",
+            "dates": "2016-12",
+            "description": "",
             "images": []
         }
     ]
@@ -75,5 +75,44 @@ var projects = {
             "email": "136464242@qq.com",
             "github": "rookielzy",
             "location": "GuangZhou"
-        }
-    }
+        },
+        "skills": [
+            "HTML",
+            "CSS",
+            "Javascrpit"
+        ]
+    },
+
+    education = {
+        "schools": [
+            {
+                "name": "XNYZ",
+                "location": "XN",
+                "degress": "High School",
+                "dates": 2013,
+                "url": "www.example.com"
+            },
+            {
+                "name": "ZK",
+                "location": "GZ",
+                "degress": "Master",
+                "dates": 2017,
+                "url": "www.example.com",
+                "majors": ["Automatic"]
+            }
+        ],
+        "onlineCourses": [
+            {
+                "title": "",
+                "school": "",
+                "dates": "",
+                "url": ""
+            }
+
+        ]
+    };
+
+if (document.getElementsByClassName("education-entry").length === 0) {
+    document.getElementById("education").style.backgroundColor = "black";
+}
+
