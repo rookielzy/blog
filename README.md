@@ -9,3 +9,4 @@ All my life I have to fight
 5. to ve continue...
 
 2017.02.07   SlimJetL is back!
+Fixed My Phone.
