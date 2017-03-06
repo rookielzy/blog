@@ -10,4 +10,4 @@ All my life I have to fight
 
 2017.02.07   SlimJetL is back!
 Fixed My Phone.
-Get out the Prison!
+I am OUT!
