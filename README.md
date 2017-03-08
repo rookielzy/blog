@@ -7,5 +7,3 @@ All my life I have to fight
 3. HTML 5, CSS 3
 4. React.js Webpack 
 5. to ve continue...
-
-Let's go!
