@@ -10,3 +10,4 @@ All my life I have to fight
 
 
 Tomorrow！！！
+Continue
