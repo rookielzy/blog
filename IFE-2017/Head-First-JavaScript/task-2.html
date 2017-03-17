@@ -41,19 +41,14 @@
                     result.push(element);
                 }
             });
-            for (var i = 0; i < result.length; i++) {
-                for (var j = i+1; j < result.length; j++) {
-                    if (result[i][1] < result[j][1]) {
-                        var tmp = result[j];
-                        result[j] = result[i];
-                        result[i] = tmp;
-                    }
-                }
-            }
+            result.sort(function(ele1, ele2) {
+                return ele2[1] - ele1[1];
+            });
+            
             result.forEach((element, index) => {
                 html += '<li>第' + number[index] + '名：' + element[0] + ',' + element[1] + '</li>';
-            })
-            console.log(result);
+            });
+
             list.innerHTML = html;
         })();
 
