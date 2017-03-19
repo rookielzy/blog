@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>任务一：表单（一）单个表单项的检验</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            main, form {
+                min-width: 600px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column;
+            }
+            section {
+                min-width: 100%;
+                font-size: 24px;
+                position: relative;
+                display: flex;
+                flex-flow: row;
+                padding: 20px;
+            }
+            input {
+                outline: none;
+                border-radius: 5px;
+            }
+            input[type='text'] {
+                flex: 3;
+                margin-right: 50px;
+                font-size: 24px;
+            }
+            label, input[type='button'] {
+                flex: 1;
+            }
+            span {
+                position: absolute;
+                color: #ccc;
+                font-size: 16px;
+                top: 55px;
+                left: 125px;
+            }
+            .alert {
+                border-color: red;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <form>
+                <section>
+                    <label for="name">名称</label>
+                    <input type="text" class="name">
+                    <span>必填，长度为4~16的字符</span>
+                    <input type="button" value="验证">
+                </section>
+                <section>
+                    <label for="name">名称</label>
+                    <input type="text" class="name">
+                    <span>必填，长度为4~16的字符</span>                    
+                    <input type="button" value="验证">
+                </section>
+                <section>
+                    <label for="name">名称</label>
+                    <input type="text" class="name">
+                    <span>必填，长度为4~16的字符</span>                    
+                    <input type="button" value="验证">
+                </section>
+            </form>
+        </main>
+        <script>
+            const confirm = document.querySelectorAll('input[type="button"]');
+            var text = document.querySelectorAll('input[type="text"]');
+            const spanText = document.querySelectorAll('span');
+            function getStrLen(str) {
+                var enLen = 0, zhLen = 0;
+                for (let ch of str) {
+                    if (isASCII(ch)){
+                        enLen++;
+                    } else {
+                        zhLen++;
+                    }
+                }
+                return enLen + zhLen*2;
+            }
+
+            function isASCII(c) {
+                return c.codePointAt(0) <= 0xFF;
+            }
+
+            function addEvent(obj, type, callback) {
+                if (obj.addEventListener) {
+                    obj.addEventListener(type, callback, false);
+                } else {
+                    obj.attachEvent('on' + type, callback);
+                }
+            }
+
+            addEvent(confirm[0], 'click', function() {
+                var length = getStrLen(text[0].value);
+                if (length > 4 && length < 16) {
+                    return;
+                } else {
+                    spanText[0].innerText = '长度不符合规则';
+                    spanText[0].classList.add('alert');
+                    text[0].classList.add('alert');
+                }
+            });
+            addEvent(confirm[1], 'click', function() {
+                var length = getStrLen(text[0].value);
+                if (length > 4 && length < 16) {
+
+                } else {
+                    
+                }
+            });
+            addEvent(confirm[2], 'click', function() {
+                var length = getStrLen(text[0].value);
+                if (length > 4 && length < 16) {
+
+                } else {
+                    
+                }
+            });
+        </script>
+    </body>
+</html>
