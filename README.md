@@ -8,7 +8,4 @@ All my life I have to fight
 4. React.js Webpack 
 5. to ve continue...
 
-
-Tomorrow！！！
-Continue
-早起赶话！
+I Got A Job!
