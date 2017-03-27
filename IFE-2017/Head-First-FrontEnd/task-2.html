@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>任务二：表单（二）多个表单项的动态校验</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            form {
+                display: flex;
+                flex-flow: column;
+                min-width: 600px;
+                display: flex;
+                justify-content: center;
+            }
+            form div {
+                display: flex;
+                height: 60px;
+                position: relative;
+            }
+            div label {
+                flex: 1;
+                text-align: right;
+            }
+            div input {
+                flex: 3;
+                margin-left: 10px;
+                height: 25px;
+                border-radius: 5px;
+                font-size: 22px;
+                border: 1px solid #ccc;
+            }
+            div span {
+                position: absolute;
+                font-size: 16px;
+                top: 30px;
+                left: 160px;
+                color: #ccc;
+                display: none;
+            }
+            .show {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label for="username">Name</label>
+                <input type="text" name="username">
+                <span class="msg">必填，长度为4~16字符</span>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password">
+                <span class="msg">必填，长度为4~16字符</span>                
+            </div>
+            <div>
+                <label for="password2">Password Confirm</label>
+                <input type="password" name="password">
+                <span class="msg">必填，长度为4~16字符</span>                
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email">
+                <span class="msg">邮箱格式: example@example.com</span>                
+            </div>
+            <div>
+                <label for="phone">Phone</label>
+                <input type="text" name="phone">
+                <span class="msg">中国大陆 11 位数</span>                
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            const inputs = document.querySelectorAll("input");
+            const msg = document.querySelectorAll("span");
+            function getStrLen(str) {
+                var enLen = 0, zhLen = 0;
+                for (let ch of str) {
+                    if (isASCII(ch)){
+                        enLen++;
+                    } else {
+                        zhLen++;
+                    }
+                }
+                return enLen + zhLen*2;
+            }
+
+            function isASCII(c) {
+                return c.codePointAt(0) <= 0xFF;
+            }
+
+            inputs.forEach( ( input, index ) => {
+                input.addEventListener('focus', function() {
+                    msg[index].classList.add('show');
+                }, false);
+            });
+
+        </script>
+    </body>
+</html>
