@@ -48,6 +48,9 @@
             .show {
                 display: block;
             }
+            .warning {
+                color: red;
+            }
         </style>
     </head>
     <body>
@@ -102,6 +105,27 @@
                 input.addEventListener('focus', function() {
                     msg[index].classList.add('show');
                 }, false);
+                input.onblur = function() {
+                    var inputLength = getStrLen(input.value);
+                    if ( inputLength === 0 ) {
+                        var empty = "不能为空",
+                            attr = input.getAttribute('name');
+                        switch ( attr ) {
+                            case 'username':
+                                msg[index].innerText = "名字" + empty;
+                                break;
+                            case 'password':
+                                msg[index].innerText = "密码" + empty;
+                                break;
+                            case 'email':
+                                msg[index].innerText = "邮箱" + empty;
+                                break;
+                            case 'phone':
+                                msg[index].innerText = "手机号" + empty;
+                                break;
+                        }
+                    }
+                }
             });
 
         </script>
