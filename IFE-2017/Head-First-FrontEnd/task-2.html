@@ -36,6 +36,8 @@
                 border-radius: 5px;
                 font-size: 22px;
                 border: 1px solid #ccc;
+                color: black !important;
+                outline: none;
             }
             div span {
                 position: absolute;
@@ -50,6 +52,11 @@
             }
             .warning {
                 color: red;
+                border-color: red;
+            }
+            .pass {
+                color: lightgreen;
+                border-color: lightgreen;
             }
         </style>
     </head>
@@ -68,7 +75,7 @@
             <div>
                 <label for="password2">Password Confirm</label>
                 <input type="password" name="password">
-                <span class="msg">必填，长度为4~16字符</span>                
+                <span class="msg">两次输入相同密码</span>                
             </div>
             <div>
                 <label for="email">Email</label>
@@ -116,6 +123,41 @@
                                 break;
                             case 'password':
                                 msg[index].innerText = "密码" + empty;
+                                break;
+                            case 'email':
+                                msg[index].innerText = "邮箱" + empty;
+                                break;
+                            case 'phone':
+                                msg[index].innerText = "手机号" + empty;
+                                break;
+                        }
+                        msg[index].classList.add('warning');
+                        input.classList.add('warning');
+                    } else {
+                        var attr = input.getAttribute('name');
+                        console.log(attr);                    
+                        switch ( attr ) {
+                            case 'username':
+                                if (getStrLen(input.value) < 4 || getStrLen(input.value) > 16) {
+                                    msg[index].innerText = "名字长度不符合";
+                                    input.classList.add('warning');
+                                    msg[index].classList.add('warning');                        
+                                } else {
+                                    msg[index].innerText = "名字可以使用";                                    
+                                    input.classList.add('pass');
+                                    msg[index].classList.add('pass');    
+                                }
+                                break;
+                            case 'password':
+                                if (getStrLen(input.value) < 4 || getStrLen(input.value) > 16) {
+                                    msg[index].innerText = "密码长度不符合";
+                                    input.classList.add('warning');
+                                    msg[index].classList.add('warning');                        
+                                } else {
+                                    msg[index].innerText = "密码可以使用";                                    
+                                    input.classList.add('pass');
+                                    msg[index].classList.add('pass');    
+                                }
                                 break;
                             case 'email':
                                 msg[index].innerText = "邮箱" + empty;
