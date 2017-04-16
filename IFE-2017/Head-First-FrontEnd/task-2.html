@@ -74,7 +74,7 @@
             </div>
             <div>
                 <label for="password2">Password Confirm</label>
-                <input type="password" name="password">
+                <input type="password" name="password2">
                 <span class="msg">两次输入相同密码</span>                
             </div>
             <div>
@@ -159,11 +159,30 @@
                                     msg[index].classList.add('pass');    
                                 }
                                 break;
+                            case 'password2':
+                                if (input.value === document.querySelector('input[name="password"]').value) {
+                                    msg[index].innerText = "密码一致";
+                                    input.classList.add('pass');
+                                    msg[index].classList.add('pass');    
+                                }
+                                break;
                             case 'email':
-                                msg[index].innerText = "邮箱" + empty;
+                                var reg = /[aA-zZ0-9]+'@'+[aA-zZ0-9]+'.com'/g;
+                                if (input.value) {
+
+                                }
                                 break;
                             case 'phone':
-                                msg[index].innerText = "手机号" + empty;
+                                console.log(input.value.length);
+                                if (input.value.length != 11) {
+                                    msg[index] = "手机号码为11位";
+                                } else if (input.value.match(/0-9/g)) {
+                                    msg[index] = "手机号码为纯数字";
+                                } else {
+                                    msg[index].innerText = "手机号码可用";
+                                    input.classList.add('pass');
+                                    msg[index].classList.add('pass');    
+                                }
                                 break;
                         }
                     }
