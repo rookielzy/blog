@@ -188,7 +188,161 @@
                     }
                 }
             });
+            function FormValidate(container) {
+                this.flag_name = false;
+                this.flag_pass = false;
+                this.flag_repass = false;
+                this.flag_email = false;
+                this.form_container = container.querySelector('.container>ul');
+                this.btn_test = container.querySelector('.form-test .test');
+            }
+            FormValidate.prototype = {
+                constructor: FormValidate,
+                testName: function(node) {
+                    var value = node.value;
+                    var nextNode = node.nextElementSibling;
+                    var len = 0;
+                    if (!value) {
+                        node.style.border = "1px solid #f00";
+                        nextNode.innerText = "Name Can Not Be Empty!";
+                        nextNode.style.color = "#f00";
+                        this.flag_name = false;
+                        return;
+                    }
+                    for (var i = 0; i < value.length; i++) {
+                        var a = value.charAt(i);
+                        if (a.match(/[^\x00-\xff]/gi) != null) {
+                            len += 2;
+                        } else {
+                            len++;
+                        }
+                    }
+                    if (len >= 4 && len <= 16) {
+                        node.style.border = "1px solid #0f0";
+                        nextNode.innerText = "Name Can Be Used";
+                        nextNode.style.color = "#0f0";
+                        this.flag_name = true;
+                        return;
+                    } else {
+                        node.style.border = "1px solid #f00";
+                        nextNode.innerText = "Name's Length Should Be 4 ~ 16";
+                        nextNode.style.color = "#f00";
+                        this.flag_name = false;
+                        return;
+                    }
+                },
 
+                testPassword: function(node) {
+                    var value = node.value;
+                    var nextNode = node.nextElementSibling;
+                    if (value.length < 6 || value.length > 16) {
+                        node.style.border = "1px solid #f00";
+                        nextNode.innerText = "Password's Length Should Be 6 ~ 16";
+                        nextNode.style.color = "#f00";
+                        this.flag_pass = false;
+                        return;
+                    } else {
+                        node.style.border = "1px solid #0f0";
+                        nextNode.innerText = "Password Can Be Used";
+                        nextNode.style.color = "#0f0";
+                        this.flag_name = true;
+                        return;
+                    }
+                },
+
+                testRePassword: function(node) {
+                    var value = node.value;
+                    var nextNode = node.nextElementSibling;
+                    var password = node.parentElement.parentElement.previousElementSibling.querySelector('.form-item input').value;
+                    if (value.length < 6 || value.length > 16) {
+                        node.style.border = "1px solid #f00";
+                        nextNode.innerText = "Password's Length Should Be 4 ~ 16";
+                        nextNode.style.color = "#f00";
+                        this.flag_repass = false;
+                        return;
+                    }
+                    if (value == password) {
+                        node.style.border = "1px solid #0f0";
+                        nextNode.innerText = "Password Match";
+                        nextNode.style.color = "#0f0";
+                        this.flag_repass = true;
+                        return;
+                    } else {
+                        node.style.border = "1px solid #f00";
+                        nextNode.innerText = "Password Can Not Match";
+                        nextNode.style.color = "#f00";
+                        this.flag_repass = false;
+                        return;
+                    }
+                },
+            testEmail: function(node) {
+                var value = node.value;
+                var nextNode = node.nextElementSibling;
+                var regx = /^[0-9a-zA-Z][0-9a-zA-Z_]+@[0-9a-zA-Z]+\.[0-9a-zA-Z]+/g;
+                if (regx.test(value)) {
+                    node.style.border = "1px solid #0f0";
+                    nextNode.innerText = "邮箱格式正确";
+                    nextNode.style.color = "#0f0";
+                    this.flag_email = true;
+                    return;
+                } else {
+                    node.style.border = "1px solid #f00";
+                    nextNode.innerText = "邮箱格式错误,请重新输入";
+                    nextNode.style.color = "#f00";
+                    this.flag_email = false;
+                    return;
+                }
+            },
+            testPhone: function(node) {
+                var value = node.value;
+                var nextNode = node.nextElementSibling;
+                if (value.length != 11 && value[0] != '1') {
+                    node.style.border = "1px solid #f00";
+                    nextNode.innerText = "请输入正确的手机号";
+                    nextNode.style.color = "#f00";
+                    this.flag_phone = false;
+                    return;
+                } else {
+                    node.style.border = "1px solid #0f0";
+                    nextNode.innerText = "手机格式正确";
+                    nextNode.style.color = "#0f0";
+                    this.flag_phone = true;
+                    return;
+                }
+            },
+
+            bind: function() {
+                var _this = this;
+                this.form_container.addEventListener("click", function(event) {
+                    var click_node = event.target;
+                    if (event.target.tagName.toLowerCase() == "input") {
+                        var nextNode = click_node.nextElementSibling;
+                        nextNode.style.visibility = "visible";
+                    }
+                });
+                this.form_container.addEventListener("blur", function(event) {
+                    var blur_ndoe = event.target;
+                    if (blur_node.name == "name") {
+                        _this.testName(blur_name);
+                    } else if (blur_node.name == "password") {
+                        _this.testPassword(blur_node);
+                    } else if (blur_node.name == "repassword") {
+                        _this.testRePassword(blur_ndoe);
+                    } else if (blur_node.name == "email") {
+                        _this.testEmail(blur_node);
+                    } else if (blur_node.name == "phone") {
+                        _this.testPhone(blur_node);
+                    }
+                }, true);
+                this.btn_test.addEventListener("click", function(event) {
+                    if (_this.flag_name && _this.flag_pass && _this.flag_repass && _this.flag_email && _this.flag_phone) {
+                        alert("Success");
+                    } else {
+                        alert("Fail");
+                    }
+                })
+            }
+            }
         </script>
     </body>
 </html>
