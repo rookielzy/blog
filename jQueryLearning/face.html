@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="..\javascripts\jquery-2.2.1.min.js"></script>
-    </head>
-    <body>
-        <button type="button">Click to get data</button>
-        <script>
-            $(document).ready(function() {
-                $('button').click(function() {
-                    $.post('https://api.megvii.com/facepp/v3/detect',
-                        {
-                            api_key: 'xoGiSlrdE0B6v-63JE_oFe9--FLbb2vL',
-                            api_secret: 'boHJ5efx-5wrc1HAkeDtPerE-Ezu3gC3',
-                            image_url: 'http://imgsrc.baidu.com/forum/w%3D580/sign=28a06bb78c1001e94e3c1407880f7b06/48540923dd54564e1934c667b2de9c82d1584f1e.jpg',
-                            return_attributes: 'gender,age,smiling,glass'
-                        },
-                        function(data) {
-                            console.log(data);
-                        }
-                    );
-                });
-            });
-        </script>
-    </body>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <input type="file">
+    <input type="button" value="Click" id="check">
+    <script>
+        var input = document.querySelector('input[type="file"]')
+        var check = document.querySelector('#check');
+        check.addEventListener("click", function () {
+            var data = new FormData();
+            data.append("api_key", "xoGiSlrdE0B6v-63JE_oFe9--FLbb2vL");
+            data.append("api_secret", "boHJ5efx-5wrc1HAkeDtPerE-Ezu3gC3");
+            data.append("image_file", input.files[0]);
+            data.append("return_landmark", "1");
+
+            fetch('https://api-cn.faceplusplus.com/facepp/v3/detect', {
+                method: 'POST',
+                mode: 'cors',
+                body: data
+            }).then(req => {
+                console.log(req.json());
+            }).catch(error => {
+                console.log(error);
+            })
+        }, false);
+    </script>
+</body>
+
 </html>
