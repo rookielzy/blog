@@ -18,7 +18,7 @@
             data.append("api_key", "xoGiSlrdE0B6v-63JE_oFe9--FLbb2vL");
             data.append("api_secret", "boHJ5efx-5wrc1HAkeDtPerE-Ezu3gC3");
             data.append("image_file", input.files[0]);
-            data.append("return_landmark", "1");
+            data.append("return_attributes", "gender", "age");
 
             fetch('https://api-cn.faceplusplus.com/facepp/v3/detect', {
                 method: 'POST',
