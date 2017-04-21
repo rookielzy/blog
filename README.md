@@ -9,3 +9,11 @@ All my life I have to fight
 5. to ve continue...
 
 Prepare For Final Project
+
+JavaScript
+HTML5
+CSS3
+Node.js
+Python
+SQL
+MongoDB
