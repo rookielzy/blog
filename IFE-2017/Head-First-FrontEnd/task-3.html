@@ -78,10 +78,13 @@
             <section>
                 <div class="stu">
                     <select name="city" id="city">
-                        <option value="BJ">北京</option>
-                        <option value="GZ">广州</option>                        
+                        <option value="0">北京</option>
+                        <option value="1">广州</option>                        
                     </select>
-                    <select name="school" id="school"></select>
+                    <select name="school" id="school">
+                        <option value="北京大学">北京大学</option>
+                        <option value="清华大学">清华大学</option>                        
+                    </select>
                 </div>
                 <div class="work hide">
                     <span>就业单位</span><input type="text" name="oparation" id="OPA">
@@ -99,12 +102,6 @@
             const city = document.querySelector('#city');
             const school = document.querySelector('#school');      
 
-            window.onload = function() {
-                for (let i = 0; i < city.length; i++) {
-
-                }
-            };
-
             catal.forEach((input, index) => {
                 input.addEventListener('click', function() {
                     if (index === 0) {
@@ -116,41 +113,15 @@
                     }
                 }, false);
             });
-            // city.addEventListener('click', function(){
-            //     if (city[0].hasAttribute('selected')) {
-            //         var html = ''; bjSchool.forEach(school => {
-            //             html = '< option value= "' + shcool + '"' + school + ' < /option>';
-            //         }); 
-            //         city.innerHTML = html;
-            //     }
-            // }, false);
-            // city.forEach(item => {
-            //     item.addEventListener('click', function() {
-            //         if (item.hasAttribute('selected')) {
-            //             var html = ''; bjSchool.forEach(sch => {
-            //                 html = '< option value= "' + shc + '"' + sch + ' < /option>';
-            //             }); 
-            //             school.innerHTML = html;
-            //         }
-            //     }, false);
-            // });
+
             city.addEventListener('change', function() {
-                console.log(this);
-                var html = '';                
-                    // city[i].addEventListener('click', function() {
-                    //     console.log(this);
-                        if (city.value === 'BJ') {
-                            university[0].forEach(sch => {
-                                html += '<option value= "' + sch + '">' + sch + ' </option>';
-                            }); 
-                        } else {
-                            university[1].forEach(sch => {
-                                html += '<option value= "' + sch + '">' + sch + ' </option>';
-                            }); 
-                        }
-                        school.innerHTML = html;
-                    // }, false);
-                html = '';
+                school.innerHTML = '';
+                var html = '';
+                var index = parseInt(city.value);
+                for (let i = 0; i < university[index].length; i++) {
+                    html += '<option value="' + university[index][i] + '">' + university[index][i] + '</option>';
+                }
+                school.innerHTML = html;
             }, false);
         </script>
     </body>
