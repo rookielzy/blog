@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>任务四：听指令的小方块（一）</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <canvas id="canvas" width="600" height="600"></canvas>
+        <script>
+            const canvas = document.querySelector('#canvas');
+            const context = canvas.getContext('2d');
+
+            function drawGrid() {
+                for (let i = 0; i < 10; i++) {
+                    context.beginPath();
+                    context.moveTo(40, 40*(i + 1));
+                    context.strokeStyle = '#ccc';
+                    
+                    if (i === 0 || i === 9) {
+                        context.strokeStyle = 'black';
+                    }
+
+                    context.lineTo(440, 40*(i + 1));
+                    context.closePath();
+                    context.stroke();
+
+                    context.beginPath();
+                    context.moveTo(40*(i + 1), 40);
+                    context.strokeStyle = '#ccc';
+                    
+                    if (i === 0) {
+                        context.strokeStyle = 'black';
+                    }
+
+                    context.lineTo(40*(i + 1), 400);
+                    context.closePath();
+                    context.stroke();
+                }
+                context.beginPath();
+                context.strokeStyle = 'black';
+                context.moveTo(440, 40);
+                context.lineTo(440, 400);
+                context.closePath();
+                context.stroke();
+                for (let i = 0; i < 10; i++) {
+                    context.beginPath();
+                    context.font = '20px Arial';
+                    context.textAlign = 'center';
+                    context.fillText(i+1, 55+40*i, 35);
+                    context.fillText(i+1, 20, 70+36*i);
+                    context.closePath();
+                    context.fill();
+                }
+            }
+            drawGrid();
+        </script>
+    </body>
+</html>
