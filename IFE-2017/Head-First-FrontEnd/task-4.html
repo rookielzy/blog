@@ -4,13 +4,31 @@
         <title>任务四：听指令的小方块（一）</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            div.control {
+                position: relative;
+                left: 40px;
+                top: -50px;
+            }
+            input.control, button.move {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+        </style>
     </head>
     <body>
-        <canvas id="canvas" width="600" height="600"></canvas>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <div class="control">
+            <input type="text" class="control">
+            <button type="button" class="move">Go</button>
+        </div>
         <script>
             const canvas = document.querySelector('#canvas');
             const context = canvas.getContext('2d');
-
+            const input = document.querySelector('input.control');
+            const move = document.querySelector('.move');
+            var direct = [0, 1, 2, 3];
+            var currentDirect = 0;
             function drawGrid() {
                 for (let i = 0; i < 10; i++) {
                     context.beginPath();
@@ -54,6 +72,44 @@
                 }
             }
             drawGrid();
+
+            function drawSquare() {
+                // Big Square
+                context.beginPath();
+                context.fillStyle = 'red';
+                // context.translate(100, 100);        
+                context.rotate(45 * Math.PI/180);                                        
+                context.fillRect(240, 240, 40, 40);
+                // context.closePath();
+
+                // Small Square
+                // context.beginPath();
+                context.fillStyle = 'blue';
+                context.fillRect(240,240, 40, 10);
+                context.closePath();
+                context.fill();
+            }
+            drawSquare();
+
+            function start() {
+                const command = input.value;
+                switch(command) {
+                    case 'GO': 
+                        swi
+                        break;
+                    case 'TUN LEF':
+
+                        break;
+                    case 'TUN RIG':
+
+                        break;
+                    case 'TUN BAC':
+
+                        break;
+                    default:
+                        return;
+                }
+            }
         </script>
     </body>
 </html>
