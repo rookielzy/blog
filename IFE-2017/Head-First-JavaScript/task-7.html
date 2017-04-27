@@ -100,17 +100,15 @@
             const divChildren = document.querySelectorAll('main div');
             console.log(divChildren);
             function PreorderTraversal() {
-                divChildren.forEach(div => {
+                divChildren.forEach((div) => {
                     div.classList.add('go');
-                    (function() {
-                        let time = setTimeout(function() {
-                        }, 1000);
-                    })()
-                    div.classList.remove('go');                    
+                    setTimeout(function() {
+                        
+                    }, 1000);
+                    div.classList.remove('go');
                 });
             }
             PreorderTraversal();
-            // inputs[0].addEventListener('click', PreorderTraversal, false);
         </script>  
     </body>
 </html>
