@@ -17,3 +17,49 @@ Node.js
 Python
 SQL
 MongoDB
+
+
+# Face Detect
+
+## Chapter One
+
+> 研究目的
+> 意义
+> 国内外研究概况
+
+## Chapter Two
+
+> 应用开发使用的技术
+
+> - `HTML`, `CSS`, `JavaScript`, `Node.js`, `Express.js`, `npm`, `Heroku`, `git`, `Face++`, `tracking.js`, `WebRTC`, `MVP`
+
+## Chapter Three
+
+> 应用开发环境及工具
+> - `Win10`, `VSCode`, `Chrome`, `Android Phone`, `iPhone`
+
+## Chapter Four
+
+> Face Detect 需求分析, ID Card, Driver Lisence 需求分析
+
+## Chapter Five
+
+> 服务器
+
+> - `Heroku`, `WebRTC`
+
+## Chapter Six
+
+> 应用实现与测试
+
+> - `Face++ API`, `tracking.js API`
+> - 应用界面介绍
+
+## Chapter Seven
+
+> 结束语，总结
+
+
+## TODO: 
+> - Face++, Tracking.js Git
+> - 功能介绍
