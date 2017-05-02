@@ -61,4 +61,4 @@ MongoDB
 
 
 ## TODO: 
-> - 功能完善与介绍
+> - Compare Face and Summary
