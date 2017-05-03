@@ -61,4 +61,4 @@ MongoDB
 
 
 ## TODO: 
-> - Compare Face and Summary
+> - Compare Face
