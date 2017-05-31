@@ -1,6 +1,21 @@
-# Free Code Camp Practise
+# I Don't Fxxking Know About JavaScript
 
-## Tribute Page
-> For my idol Nasty Nas
+`sort`:
+```javascript
+arr.sort((a, b) => {
+    return a - b;
+});
+// then return the sorted array
+```
 
-> Here is the link about Nas   [Tribute](http://codepen.io/lzyjet1994/pen/amzmPr)
+`concat`:
+```javascript
+newArr = arr1.concat(arr2);
+
+
+newArr.filter(item => {
+    if (arr1.indexOf(item) === -1 || arr2.indexOf(item) === -1) {
+        return item;
+    }
+})
+```
