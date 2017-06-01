@@ -11,11 +11,29 @@
             <a href="#" class="slide slide1 slide-active"></a>
             <a href="#" class="slide slide2"></a>
             <a href="#" class="slide slide3"></a>
+            <span class="left"></span>
+            <span class="right"></span>
             <div class="dots">
                 <span class="dot-active"></span>
                 <span></span>
                 <span></span>
             </div>
         </main>
+        <script>
+            const slides = document.querySelectorAll("slide");
+            const dots = document.querySelector(".dots span");
+            const controls = document.querySelectorAll(".left, .right");
+
+            controls.forEach((control, index) => {
+                control.addEventListener("click", () => {
+                    if (index === 0) {
+                        
+                    }
+                }, false);
+            })
+
+
+            console.log(before);
+        </script>
     </body>
 </html>
