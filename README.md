@@ -11,3 +11,9 @@ SQL
 MongoDB
 
 
+TODO:
+MOOK(JavaScript)
+Node.js
+React.js
+Vue.js
+Python
