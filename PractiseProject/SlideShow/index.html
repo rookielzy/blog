@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Slide Show</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet">
-    </head>
-    <body>
-        <main class="container">
-            <a href="#" class="slide slide1 slide-active"></a>
-            <a href="#" class="slide slide2"></a>
-            <a href="#" class="slide slide3"></a>
-            <span class="left"></span>
-            <span class="right"></span>
-            <div class="dots">
-                <span class="dot-active"></span>
-                <span></span>
-                <span></span>
-            </div>
-        </main>
-        <script>
-            const slides = document.querySelectorAll("slide");
-            const dots = document.querySelector(".dots span");
-            const controls = document.querySelectorAll(".left, .right");
 
-            controls.forEach((control, index) => {
-                control.addEventListener("click", () => {
-                    if (index === 0) {
-                        
-                    }
-                }, false);
-            })
+<head>
+    <title>Slide Show</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
 
+<body>
+    <main class="container">
+        <a href="#" class="slide slide1 slide-active"></a>
+        <a href="#" class="slide slide2"></a>
+        <a href="#" class="slide slide3"></a>
+        <span class="left"></span>
+        <span class="right"></span>
+        <div class="dots">
+            <span class="dot-active"></span>
+            <span></span>
+            <span></span>
+        </div>
+    </main>
+    <script>
+        const slides = document.querySelectorAll("slide");
+        const dots = document.querySelector(".dots span");
+        const controls = document.querySelectorAll(".left, .right");
 
-            console.log(before);
-        </script>
-    </body>
+        var index = 0;
+        function changeImage() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("slide-active");
+                if (i === index) {
+                    slides[i].classList.add("slide-active");
+                }
+                index++;
+                if (index === 3) {
+                    index = 0;
+                }
+            }
+
+        }
+        setInterval(changeImage, 1000);
+    </script>
+</body>
+
 </html>
