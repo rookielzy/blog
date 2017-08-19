@@ -18,4 +18,4 @@ React.js
 Vue.js
 Python
 
-CVTE!
+GO FUCK YOURSELF!
